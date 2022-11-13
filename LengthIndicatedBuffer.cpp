@@ -15,9 +15,6 @@ template <typename HeaderType>
 LengthIndicatedBuffer<HeaderType>::LengthIndicatedBuffer(const char magicNumber[4], const char delim) : delim(delim) {
     clear();
     memcpy(this->magicNumber, magicNumber, sizeof(this->magicNumber));
-
-    // shouldn't be necessary since the program should not read any part of the buffer that has not been written to
-    // but valgrind complained, so here we are
     memset(buffer, 0, sizeof(buffer));
 }
 

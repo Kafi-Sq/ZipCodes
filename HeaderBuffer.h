@@ -41,4 +41,4 @@ class HeaderBuffer {
     void write(std::ostream& file);
 };
 
-#endif  // HEADER_BUFFER_H
+#endif

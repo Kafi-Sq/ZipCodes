@@ -198,4 +198,4 @@ class LengthIndicatedBuffer {
 template class LengthIndicatedBuffer<BlockFileHeader>;
 template class LengthIndicatedBuffer<LIHeader>;
 
-#endif  // CSVBUFFER_H
+#endif

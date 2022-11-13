@@ -49,6 +49,7 @@ class BlockedFile {
     void addEmptyBlock(int RBN, BlockHeader blockHeader);
     BlockedFile() = default;
     BlockedFile(std::string fileName);
+    // ~BlockedFile();
 
     std::optional<Place> findRecord(std::string recordKey);
     void generateIndex();

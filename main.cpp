@@ -238,4 +238,6 @@ int main(int argc, char const* argv[]) {
         f2.addRecord(*r);
     }
     f2.logicalDump();
+
+    return 0;
 }

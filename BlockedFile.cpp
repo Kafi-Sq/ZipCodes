@@ -11,9 +11,6 @@ BlockedFile::BlockedFile(std::string fileName) : fileName(fileName), readRecBuf(
     } else {
         throw;
     }
-
-    //     dataStartRBN = header.headerInfo.headerSize;
-    //     initializeIndex();
 }
 
 bool BlockedFile::openDataFile() {
@@ -90,7 +87,6 @@ void BlockedFile::splitBlock(int RBN, Place newRecord) {
         header.fileInfo.blockCount += 1;
         addEmptyBlock(header.fileInfo.blockCount, {0, -1, -1});
         header.fileInfo.availBlock = header.fileInfo.blockCount;
-        // writeHeader();
     } else {
         header.fileInfo.availBlock = nextAvailRBN;
     }
@@ -124,7 +120,6 @@ void BlockedFile::addRecord(Place place) {
     if (RBN == PrimaryKey::notFound) {
         RBN = header.fileInfo.activeBlock;
     }
-    // TODO if index returns not found, add record to last block
 
     // if file has block
     if (readBlockBuf.read(file, RBN)) {
@@ -229,11 +224,6 @@ BlockFileHeader BlockedFile::writeHeader() {
     
     hb.read(file);
     hb.unpack(currentHeader);
-
-    // if (currentHeader.headerInfo.headerSize != header.headerInfo.headerSize) {
-    //     std::cerr << "header size is wrong" << std::endl;
-    //     exit(1);
-    // }
     file.seekp(0);
 
     file << header;

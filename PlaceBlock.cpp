@@ -1,7 +1,5 @@
 #include "PlaceBlock.h"
-
 #include <algorithm>
-
 #include "PrimaryKey.h"
 
 bool PlaceBlock::unpack(BlockBuffer &bBuf, LengthIndicatedBuffer<BlockFileHeader> &lBuf) {

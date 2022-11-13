@@ -9,8 +9,6 @@
 #include "enums.h"
 
 // needed to remove automatic alignment of struct members
-// there might be a way around this, but with the code the way
-// it is, the compiler padding will mess with the loading of the file
 #pragma pack(push, 1)
 struct HeaderInfo {
     char magic[4];   /// 4 bytes at the start indicating that the file is of the correct type

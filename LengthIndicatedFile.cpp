@@ -1,4 +1,6 @@
 #include "LengthIndicatedFile.h"
+
+
 LengthIndicatedFile::LengthIndicatedFile(std::string fileName) : fileName(fileName), readBuf(MAGIC_HEADER_NUMBER), writeBuf(MAGIC_HEADER_NUMBER) {
     openDataFile();
     initializeBuffers();
