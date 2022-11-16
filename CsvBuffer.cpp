@@ -24,8 +24,6 @@ bool CsvBuffer::read(std::istream& instream) {
         endOfFile = instream.get(c).eof();  // will be set to true if we try to read beyond the end of the file
 
         if (c == '\r' && instream.peek() == '\n' && !inQuotes) {
-            // excel adds \r\n (0D 0A) to end of line when exporting from xlsx to csv
-            // so we skip the carriage return if it is in said sequence since I don't like it
             continue; 
         } else if (c == '\n' && !inQuotes) {
             buffer.push_back(c);

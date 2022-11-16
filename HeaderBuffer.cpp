@@ -1,7 +1,6 @@
 #include "HeaderBuffer.h"
 
 #include <iostream>
-// #include <string>
 
 void HeaderBuffer::read(std::istream& ins) {
     ins.seekg(0);

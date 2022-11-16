@@ -34,4 +34,4 @@ class HeaderBuffer {
     Header unpack();
 };
 
-#endif  // HEADER_BUFFER_H
+#endif

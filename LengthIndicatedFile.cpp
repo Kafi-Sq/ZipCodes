@@ -1,4 +1,6 @@
 #include "LengthIndicatedFile.h"
+
+
 LengthIndicatedFile::LengthIndicatedFile(std::string fileName) : fileName(fileName) {
     openDataFile();
     initializeBuffers();

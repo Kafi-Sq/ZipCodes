@@ -12,9 +12,6 @@ const char MAGIC_HEADER_NUMBER[4] = {'Z', 'C', '0', '2'};
 
 LengthIndicatedBuffer::LengthIndicatedBuffer(const char delim) : delim(delim) {
     clear();
-
-    // shouldn't be necessary since the program should not read any part of the buffer that has not been written to
-    // but valgrind complained, so here we are
     memset(buffer, 0, sizeof(buffer));  
 }
 

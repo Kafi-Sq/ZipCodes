@@ -1,8 +1,7 @@
 #ifndef ENUMS_H
 #define ENUMS_H
 
-// idea adapted from https://stackoverflow.com/a/30338543
-/// used for tiny csv parsing state machine
+// used for tiny csv parsing state machine
 enum class CSVState {
     QuotedField,
     UnquotedField,
