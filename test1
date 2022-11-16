@@ -1,4 +1,4 @@
-Script started on Wed 16 Nov 2022 03:28:32 PM CST
+Script started on Wed 16 Nov 2022 10:55:32 PM CST
 ]0;nz7517ib@csci4:~/CSCI331/Project4 [?1034h[nz7517ib@csci4 Project4]$ ./Zipco[K[KCode.out -C[K[K[K us_ postal_codes_shuffled_columns.csv [C[C[C[46@./ZipCode.out us_postal_codes_shuffled_columns[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@-[1@C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-[Kus_postal_codes_[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kus_postal_codes_shuffled_columns.lir
 ]0;nz7517ib@csci4:~/CSCI331/Project4 [?1034h[nz7517ib@csci4 Project4]$ /[K ./ZipCode.out -C
 ]0;nz7517ib@csci4:~/CSCI331/Project4 [?1034h[nz7517ib@csci4 Project4]$ us_postal_codes_ROW_RANDOMIZED.csv[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K      ./ZipCode.out -Cus_postal_codes_ROW_RANDOMIZED.csv us_postal_codes_ROW_RANDOMIZED.lir
@@ -49,4 +49,4 @@ The following zip codes did not match any records in the file:
 ]0;nz7517ib@csci4:~/CSCI331/Project4 [?1034h[nz7517ib@csci4 Project4]$ exit
 exit
 
-Script done on Wed 16 Nov 2022 03:29:32 AM CST
+Script done on Wed 16 Nov 2022 10:56:37 AM CST
