@@ -82,11 +82,9 @@ class Place {
      *
      * @post the member variables have been set to the values mentioned above, if the column with that name was found
      */
-    void unpack(LengthIndicatedBuffer<LIHeader>& buffer);
-    void unpack(LengthIndicatedBuffer<BlockFileHeader>& buffer);
+    void unpack(LengthIndicatedBuffer& buffer);
     
-    void pack(LengthIndicatedBuffer<LIHeader>& buffer);
-    void pack(LengthIndicatedBuffer<BlockFileHeader>& buffer);
+    void pack(LengthIndicatedBuffer& buffer);
 
     /**
      * @brief Assignment operator overload
@@ -94,7 +92,6 @@ class Place {
      * @param loc The place object that this one's parameters will match
      */
     void operator=(const Place& loc);
-    bool operator<(const Place& loc);
 
     /**
      * @brief get size of object in bytes
@@ -113,6 +110,5 @@ class Place {
     double latitude;
     double longitude;
 };
-
 
 #endif

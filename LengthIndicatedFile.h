@@ -13,32 +13,27 @@
 #include "enums.h"
 
 class LengthIndicatedFile {
-    static constexpr char MAGIC_HEADER_NUMBER[4] = {'Z', 'C', '0', '2'};
-
    private:
+    Header header;
     PrimaryKey index;
 
-    LengthIndicatedBuffer<LIHeader> readBuf;
-    LengthIndicatedBuffer<LIHeader> writeBuf;
+    LengthIndicatedBuffer readBuf;
+    LengthIndicatedBuffer writeBuf;
 
     std::string fileName;
     std::fstream file;
 
     int dataStart;
 
-    bool openDataFile();
-    bool indexFileExists();
-    void initializeBuffers();
-    void initializeIndex();
-    void generateIndex();
-
    public:
-    LIHeader header;
     LengthIndicatedFile(std::string fileName);
     ~LengthIndicatedFile();
+    void initializeBuffers();
+    void initializeIndex();
+    bool openDataFile();
     std::optional<Place> findRecord(std::string recordKey);
-    std::optional<Place> getNextRecord();
-    PrimaryKey getIndex();
+    void generateIndex();
+    bool indexFileExists();
 };
 
 #endif

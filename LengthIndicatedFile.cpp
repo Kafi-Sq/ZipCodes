@@ -1,7 +1,5 @@
 #include "LengthIndicatedFile.h"
-
-
-LengthIndicatedFile::LengthIndicatedFile(std::string fileName) : fileName(fileName), readBuf(MAGIC_HEADER_NUMBER), writeBuf(MAGIC_HEADER_NUMBER) {
+LengthIndicatedFile::LengthIndicatedFile(std::string fileName) : fileName(fileName) {
     openDataFile();
     initializeBuffers();
     dataStart = header.headerInfo.headerSize;
@@ -13,9 +11,11 @@ LengthIndicatedFile::~LengthIndicatedFile() {
 }
 
 void LengthIndicatedFile::initializeBuffers() {
-    readBuf.init(file);
-    writeBuf.init(file);
+    std::ifstream dataFile(fileName);
+    readBuf.init(dataFile);
+    writeBuf.init(dataFile);
     this->header = readBuf.header;
+    dataFile.close();
 }
 
 void LengthIndicatedFile::initializeIndex() {
@@ -60,17 +60,4 @@ void LengthIndicatedFile::generateIndex() {
 
 bool LengthIndicatedFile::indexFileExists() {
     return std::filesystem::exists(header.fileInfo.indexFileName);
-}
-
-std::optional<Place> LengthIndicatedFile::getNextRecord() {
-    if (readBuf.read(file)) {
-        Place p;
-        p.unpack(readBuf);
-        return p;
-    }
-    return {};
-}
-
-PrimaryKey LengthIndicatedFile::getIndex() {
-    return index;
 }

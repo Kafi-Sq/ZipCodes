@@ -102,4 +102,4 @@ class CsvBuffer {
     std::vector<std::pair<HeaderField, std::string>> getHeaders() const;
 };
 
-#endif
+#endif  // CSVBUFFER_H
