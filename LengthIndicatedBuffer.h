@@ -1,3 +1,6 @@
+/**
+/*@file name: LengthIndicatedBuffer.h */
+
 #ifndef LIBUFFER_H
 #define LIBUFFER_H
 

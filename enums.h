@@ -1,3 +1,6 @@
+/**
+/*@file name: enums.h */
+
 #ifndef ENUMS_H
 #define ENUMS_H
 

@@ -1,3 +1,6 @@
+/**
+/*@file name: LengthIndicatedFile.h */
+
 #ifndef LENGTHINDICATEDFILE_H
 #define LENGTHINDICATEDFILE_H
 

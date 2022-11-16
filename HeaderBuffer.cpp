@@ -1,5 +1,7 @@
-#include "HeaderBuffer.h"
+/**
+/*@file name: HeaderBuffer.cpp */
 
+#include "HeaderBuffer.h"
 #include <iostream>
 
 void HeaderBuffer::read(std::istream& ins) {

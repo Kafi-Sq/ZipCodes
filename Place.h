@@ -1,6 +1,6 @@
-/* This file contains the record details like zipcode, State ID, longitude and latitude.
-We have the unpack and read functions that
-puts the data from CSV file into the buffer and reads the data from CSV file. */
+/**
+/*@file name: Place.h */
+
 #ifndef PLACE_H
 #define PLACE_H
 
@@ -9,6 +9,9 @@ puts the data from CSV file into the buffer and reads the data from CSV file. */
 #include "CsvBuffer.h"
 #include "LengthIndicatedBuffer.h"
 
+/* This file contains the record details like zipcode, State ID, longitude and latitude.
+We have the unpack and read functions that
+puts the data from CSV file into the buffer and reads the data from CSV file. */
 class Place {
    public:
     Place();

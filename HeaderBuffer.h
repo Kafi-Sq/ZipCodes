@@ -1,3 +1,6 @@
+/**
+/*@file name: HeaderBuffer.h */
+
 #ifndef HEADER_BUFFER_H
 #define HEADER_BUFFER_H
 
