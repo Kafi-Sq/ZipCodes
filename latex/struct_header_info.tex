@@ -1,0 +1,28 @@
+\hypertarget{struct_header_info}{}\doxysection{Header\+Info Struct Reference}
+\label{struct_header_info}\index{HeaderInfo@{HeaderInfo}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_header_info_a12e474ce43894959d8d45f0afe6b7fac}\label{struct_header_info_a12e474ce43894959d8d45f0afe6b7fac}} 
+char {\bfseries magic} \mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_header_info_a8cec9ed005303c83856771f2343b6bb7}\label{struct_header_info_a8cec9ed005303c83856771f2343b6bb7}} 
+int {\bfseries version}
+\begin{DoxyCompactList}\small\item\em 4 bytes at the start indicating that the file is of the correct type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_header_info_a93b5ff22273f05810d12964fcb8549f0}\label{struct_header_info_a93b5ff22273f05810d12964fcb8549f0}} 
+int {\bfseries header\+Size}
+\begin{DoxyCompactList}\small\item\em version number \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_header_info_a706ba3066fc06e2b6c40850d46a92a34}\label{struct_header_info_a706ba3066fc06e2b6c40850d46a92a34}} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&ins, \mbox{\hyperlink{struct_header_info}{Header\+Info}} \&header\+Info)
+\begin{DoxyCompactList}\small\item\em size of header in bytes, including header info \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_header_info_aeef5f942581775dff27ed841a54a336e}\label{struct_header_info_aeef5f942581775dff27ed841a54a336e}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{struct_header_info}{Header\+Info}} \&header\+Info)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Header.\+h\end{DoxyCompactItemize}

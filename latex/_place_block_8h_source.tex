@@ -1,0 +1,26 @@
+\hypertarget{_place_block_8h_source}{}\doxysection{Place\+Block.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <optional>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}BlockBuffer.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Place.h"{}}}
+\DoxyCodeLine{4 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_place_block}{PlaceBlock}} \{}
+\DoxyCodeLine{7    \textcolor{keyword}{private}:}
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} size = -\/1;}
+\DoxyCodeLine{9     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_place_block_a0efd287c91ec65a508557b8e83bdaf8c}{highestKey}} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{11    \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     BlockHeader \mbox{\hyperlink{class_place_block_a7d6554ad833cd843f5e51312a90e917e}{blockHeader}};}
+\DoxyCodeLine{13     vector<Place> \mbox{\hyperlink{class_place_block_aee2f4ab3880fde862ed893aba51473f6}{placeBlock}};}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_place_block_ac0bc7b830fd8685e02e8b37fe679d821}{PlaceBlock}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{bool} unpack(\mbox{\hyperlink{class_block_buffer}{BlockBuffer}}\& bBuf, \mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer<BlockFileHeader>}}\& lBuf);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{string} getHighestKey();}
+\DoxyCodeLine{25     optional<Place> \mbox{\hyperlink{class_place_block_aeff6593ad69eac29c4c42c95fb103441}{getRecord}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& key);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_place_block_adb9b0e5e673eb5007cbb9dd6dde278d2}{print}}();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_place_block_a5a38c5ec3d97b8ce097a623906e5b377}{sort}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_place_block_a9c47a57fcd073736884a3c078f3cb2a5}{getSize}}();}
+\DoxyCodeLine{38 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,48 @@
+\hypertarget{_csv_buffer_8h_source}{}\doxysection{Csv\+Buffer.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef CSVBUFFER\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define CSVBUFFER\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <istream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}enums.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_csv_buffer}{CsvBuffer}} \{}
+\DoxyCodeLine{14    \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     \textcolor{keyword}{const} \textcolor{keywordtype}{char} delim;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     std::string buffer;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_csv_buffer_a7e9619226118d2b99a62fba91224c857}{curr}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{23     \textcolor{comment}{// size\_t recordCount;}}
+\DoxyCodeLine{25 \textcolor{comment}{}    \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_csv_buffer_a97c256a4b2c5e00764cb92b2d0720c57}{fieldNum}};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_csv_buffer_a3f2c77575e87adb86b42fadb6d0f2ea5}{numFields}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{// first part holds the header type for use when unpacking,}}
+\DoxyCodeLine{30     \textcolor{comment}{// second part holds the actual header value}}
+\DoxyCodeLine{31     std::vector<std::pair<HeaderField, std::string>> headers;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_csv_buffer_a4fc7e89cdb27af0d4673e90a9cfcd708}{readHeader}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44    \textcolor{keyword}{public}:}
+\DoxyCodeLine{51     \mbox{\hyperlink{class_csv_buffer}{CsvBuffer}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} delim = \textcolor{charliteral}{','});}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_csv_buffer_a6df10886c1cf61154735afbc84a6ae07}{read}}(std::istream\& instream);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_csv_buffer_a5b50f55c56a5e70e0d7294a65aa5df11}{unpack}}(std::string\& str);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_csv_buffer_a639615afeee38796aea6132e2d761b14}{init}}(std::istream\& instream);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{103     std::pair<HeaderField, std::string> \mbox{\hyperlink{class_csv_buffer_a777518eb33a8dc3b2067c684bcee3cd4}{getCurFieldHeader}}();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     std::vector<std::pair<HeaderField, std::string>> getHeaders() \textcolor{keyword}{const};}
+\DoxyCodeLine{106 \};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,79 @@
+\hypertarget{class_header_buffer}{}\doxysection{Header\+Buffer Class Reference}
+\label{class_header_buffer}\index{HeaderBuffer@{HeaderBuffer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_header_buffer_a8abdcb78c87542101af7e3768cf432b3}{read}} (std\+::istream \&ins)
+\begin{DoxyCompactList}\small\item\em Read header file into buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_header}{Header}} \mbox{\hyperlink{class_header_buffer_a79add559d2bb9a954b05f96c5c4f3d5a}{unpack}} ()
+\begin{DoxyCompactList}\small\item\em Unpacks header fields from buffer into \mbox{\hyperlink{struct_header}{Header}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_header_buffer_a4e89b3562aa0cc7797922da2ad0c6059}\label{class_header_buffer_a4e89b3562aa0cc7797922da2ad0c6059}} 
+std\+::vector$<$ unsigned char $>$ {\bfseries buffer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_header_buffer_a8abdcb78c87542101af7e3768cf432b3}\label{class_header_buffer_a8abdcb78c87542101af7e3768cf432b3}} 
+\index{HeaderBuffer@{HeaderBuffer}!read@{read}}
+\index{read@{read}!HeaderBuffer@{HeaderBuffer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Header\+Buffer\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{ins }\end{DoxyParamCaption})}
+
+
+
+Read header file into buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ins} & stream to be read in from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+ins is pointing to an open length indicated file and ins.\+good() is true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+ins is positioned at the first character after the header 
+
+buffer is filled with header bytes 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_header_buffer_a8abdcb78c87542101af7e3768cf432b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_header_buffer_a79add559d2bb9a954b05f96c5c4f3d5a}\label{class_header_buffer_a79add559d2bb9a954b05f96c5c4f3d5a}} 
+\index{HeaderBuffer@{HeaderBuffer}!unpack@{unpack}}
+\index{unpack@{unpack}!HeaderBuffer@{HeaderBuffer}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_header}{Header}} Header\+Buffer\+::unpack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unpacks header fields from buffer into \mbox{\hyperlink{struct_header}{Header}} object. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_header_buffer_a8abdcb78c87542101af7e3768cf432b3}{read()}} has been called on a valid file and buffer contains a header with the \mbox{\hyperlink{struct_header}{Header}} format
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{struct_header}{Header}} object loaded with the information in the file 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_header_buffer_a79add559d2bb9a954b05f96c5c4f3d5a_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Header\+Buffer.\+h\item 
+Header\+Buffer.\+cpp\end{DoxyCompactItemize}

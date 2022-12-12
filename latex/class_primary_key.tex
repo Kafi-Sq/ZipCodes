@@ -1,0 +1,164 @@
+\hypertarget{class_primary_key}{}\doxysection{Primary\+Key Class Reference}
+\label{class_primary_key}\index{PrimaryKey@{PrimaryKey}}
+
+
+Collaboration diagram for Primary\+Key\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{class_primary_key__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_primary_key_1_1_index_file_header}{Index\+File\+Header}}
+\item 
+struct \mbox{\hyperlink{struct_primary_key_1_1_key_struct}{Key\+Struct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_primary_key_aa0495fb46efb798f8db910abf25a0208}\label{class_primary_key_aa0495fb46efb798f8db910abf25a0208}} 
+enum {\bfseries Index\+File\+Format} \{ {\bfseries ASCII}
+, {\bfseries BCD}
+, {\bfseries BINARY}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_primary_key_a57f15735bee6ad0dbf8a4517ef4f9eb6}{Generate\+Index\+File}} (std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Generates an index file from the internal index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_primary_key_a3cf571ff7e01481f12c3e6be6581deb7}{Read\+Index\+File}} (std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Reads an index file and stores the values in the internal index. Also records if the index\textquotesingle{}s primary keys are in ascending order, to facilitate binary search. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primary_key_ae9e1740f447b73a12ee8ba92abd1bbd2}{Add}} (\mbox{\hyperlink{struct_primary_key_1_1_key_struct}{Key\+Struct}} key\+Struct)
+\begin{DoxyCompactList}\small\item\em Adds a key, value pair to the index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_primary_key_a1f8d9055235dcae267dd799b855ca3f0}{Find}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Performs a linear search on the internal index to try to find the given key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_primary_key_ad9939e0d64933fa47cdc3bb5074d0802}{Binary\+Search}} (std\+::string str)
+\begin{DoxyCompactList}\small\item\em Performs a binary search on the internal index to try to find the given key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_primary_key_a0f2a4cdedf5b4dd608b3ff1cd65ae429}\label{class_primary_key_a0f2a4cdedf5b4dd608b3ff1cd65ae429}} 
+static const int {\bfseries not\+Found} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_primary_key_aaa2ea41121dfcd1e39931ce1e89a394c}\label{class_primary_key_aaa2ea41121dfcd1e39931ce1e89a394c}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_primary_key_1_1_key_struct}{Key\+Struct}} $>$ {\bfseries v\+Key}
+\item 
+\mbox{\Hypertarget{class_primary_key_a8865e3587fae6963cacd406729df9b81}\label{class_primary_key_a8865e3587fae6963cacd406729df9b81}} 
+bool {\bfseries is\+Sorted} = false
+\item 
+\mbox{\Hypertarget{class_primary_key_ab83ee297b144de0bfc85e95d30003c66}\label{class_primary_key_ab83ee297b144de0bfc85e95d30003c66}} 
+\mbox{\hyperlink{struct_primary_key_1_1_index_file_header}{Index\+File\+Header}} {\bfseries header}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_primary_key_ae9e1740f447b73a12ee8ba92abd1bbd2}\label{class_primary_key_ae9e1740f447b73a12ee8ba92abd1bbd2}} 
+\index{PrimaryKey@{PrimaryKey}!Add@{Add}}
+\index{Add@{Add}!PrimaryKey@{PrimaryKey}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Primary\+Key\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_primary_key_1_1_key_struct}{Key\+Struct}}}]{key\+Struct }\end{DoxyParamCaption})}
+
+
+
+Adds a key, value pair to the index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Struct} & the struct containing the key, value pair to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primary_key_ad9939e0d64933fa47cdc3bb5074d0802}\label{class_primary_key_ad9939e0d64933fa47cdc3bb5074d0802}} 
+\index{PrimaryKey@{PrimaryKey}!BinarySearch@{BinarySearch}}
+\index{BinarySearch@{BinarySearch}!PrimaryKey@{PrimaryKey}}
+\doxysubsubsection{\texorpdfstring{BinarySearch()}{BinarySearch()}}
+{\footnotesize\ttfamily int Primary\+Key\+::\+Binary\+Search (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+
+
+Performs a binary search on the internal index to try to find the given key. 
+
+\begin{DoxyPrecond}{Precondition}
+list does not have to be sorted since the first thing the function checks is if it is, then sorts it if it is not 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+internal list is sorted in ascending order
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the zip code to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int if \texorpdfstring{$>$}{>}= 0, the return value is the offset from the start of the file to the start of the record 
+
+int if = -\/1, the key could not be found in the record 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_primary_key_a1f8d9055235dcae267dd799b855ca3f0}\label{class_primary_key_a1f8d9055235dcae267dd799b855ca3f0}} 
+\index{PrimaryKey@{PrimaryKey}!Find@{Find}}
+\index{Find@{Find}!PrimaryKey@{PrimaryKey}}
+\doxysubsubsection{\texorpdfstring{Find()}{Find()}}
+{\footnotesize\ttfamily int Primary\+Key\+::\+Find (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Performs a linear search on the internal index to try to find the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the zip code to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int if \texorpdfstring{$>$}{>}= 0, the return value is the offset from the start of the file to the start of the record 
+
+int if = -\/1, the key could not be found in the record 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_primary_key_a57f15735bee6ad0dbf8a4517ef4f9eb6}\label{class_primary_key_a57f15735bee6ad0dbf8a4517ef4f9eb6}} 
+\index{PrimaryKey@{PrimaryKey}!GenerateIndexFile@{GenerateIndexFile}}
+\index{GenerateIndexFile@{GenerateIndexFile}!PrimaryKey@{PrimaryKey}}
+\doxysubsubsection{\texorpdfstring{GenerateIndexFile()}{GenerateIndexFile()}}
+{\footnotesize\ttfamily void Primary\+Key\+::\+Generate\+Index\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Generates an index file from the internal index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the index file that will be created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primary_key_a3cf571ff7e01481f12c3e6be6581deb7}\label{class_primary_key_a3cf571ff7e01481f12c3e6be6581deb7}} 
+\index{PrimaryKey@{PrimaryKey}!ReadIndexFile@{ReadIndexFile}}
+\index{ReadIndexFile@{ReadIndexFile}!PrimaryKey@{PrimaryKey}}
+\doxysubsubsection{\texorpdfstring{ReadIndexFile()}{ReadIndexFile()}}
+{\footnotesize\ttfamily bool Primary\+Key\+::\+Read\+Index\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Reads an index file and stores the values in the internal index. Also records if the index\textquotesingle{}s primary keys are in ascending order, to facilitate binary search. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the index file to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true file was read successfully 
+
+false file was unable to be read successfully 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Primary\+Key.\+h\item 
+Primary\+Key.\+cpp\end{DoxyCompactItemize}

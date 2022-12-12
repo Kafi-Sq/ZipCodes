@@ -1,0 +1,250 @@
+\hypertarget{class_csv_buffer}{}\doxysection{Csv\+Buffer Class Reference}
+\label{class_csv_buffer}\index{CsvBuffer@{CsvBuffer}}
+
+
+Collaboration diagram for Csv\+Buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{class_csv_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_csv_buffer_a84eb1190ed516ad35a35cad5f9985a0b}{Csv\+Buffer}} (const char delim=\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Construct a new Csv Buffer object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_csv_buffer_a6df10886c1cf61154735afbc84a6ae07}{read}} (std\+::istream \&instream)
+\begin{DoxyCompactList}\small\item\em Reads one record into the buffer if there is data left in the stream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_csv_buffer_a5b50f55c56a5e70e0d7294a65aa5df11}{unpack}} (std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Reads a field and puts it into a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_csv_buffer_a639615afeee38796aea6132e2d761b14}{init}} (std\+::istream \&instream)
+\begin{DoxyCompactList}\small\item\em Performs the first read and extracts the headers. \end{DoxyCompactList}\item 
+std\+::pair$<$ Header\+Field, std\+::string $>$ \mbox{\hyperlink{class_csv_buffer_a777518eb33a8dc3b2067c684bcee3cd4}{get\+Cur\+Field\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type and value of the current field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_csv_buffer_ac77288e4e15ad809145cf98ab993d9c0}\label{class_csv_buffer_ac77288e4e15ad809145cf98ab993d9c0}} 
+std\+::vector$<$ std\+::pair$<$ Header\+Field, std\+::string $>$ $>$ {\bfseries get\+Headers} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_csv_buffer_a4fc7e89cdb27af0d4673e90a9cfcd708}{read\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Reads through the first record in the file and extracts the fields for use as metadata. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_csv_buffer_a66b4ec50daed50e4c5ce138eff297a9f}\label{class_csv_buffer_a66b4ec50daed50e4c5ce138eff297a9f}} 
+const char {\bfseries delim}
+\item 
+\mbox{\Hypertarget{class_csv_buffer_a19b2ccbfec5f4972e4fcd7182eacf0c7}\label{class_csv_buffer_a19b2ccbfec5f4972e4fcd7182eacf0c7}} 
+std\+::string {\bfseries buffer}
+\item 
+\mbox{\Hypertarget{class_csv_buffer_a7e9619226118d2b99a62fba91224c857}\label{class_csv_buffer_a7e9619226118d2b99a62fba91224c857}} 
+size\+\_\+t {\bfseries curr}
+\begin{DoxyCompactList}\small\item\em holds the position of the start of unprocessed fields \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_csv_buffer_a97c256a4b2c5e00764cb92b2d0720c57}{field\+Num}}
+\begin{DoxyCompactList}\small\item\em number of records currently in the unprocessed part of the buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_csv_buffer_a3f2c77575e87adb86b42fadb6d0f2ea5}\label{class_csv_buffer_a3f2c77575e87adb86b42fadb6d0f2ea5}} 
+size\+\_\+t {\bfseries num\+Fields}
+\begin{DoxyCompactList}\small\item\em number of fields in each record \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_csv_buffer_a695a0c147fb51e993b36aed6b917699c}\label{class_csv_buffer_a695a0c147fb51e993b36aed6b917699c}} 
+std\+::vector$<$ std\+::pair$<$ Header\+Field, std\+::string $>$ $>$ {\bfseries headers}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_csv_buffer_a84eb1190ed516ad35a35cad5f9985a0b}\label{class_csv_buffer_a84eb1190ed516ad35a35cad5f9985a0b}} 
+\index{CsvBuffer@{CsvBuffer}!CsvBuffer@{CsvBuffer}}
+\index{CsvBuffer@{CsvBuffer}!CsvBuffer@{CsvBuffer}}
+\doxysubsubsection{\texorpdfstring{CsvBuffer()}{CsvBuffer()}}
+{\footnotesize\ttfamily Csv\+Buffer\+::\+Csv\+Buffer (\begin{DoxyParamCaption}\item[{const char}]{delim = {\ttfamily \textquotesingle{},\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Construct a new Csv Buffer object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delim} & The delimiter used in the csv file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_csv_buffer_a777518eb33a8dc3b2067c684bcee3cd4}\label{class_csv_buffer_a777518eb33a8dc3b2067c684bcee3cd4}} 
+\index{CsvBuffer@{CsvBuffer}!getCurFieldHeader@{getCurFieldHeader}}
+\index{getCurFieldHeader@{getCurFieldHeader}!CsvBuffer@{CsvBuffer}}
+\doxysubsubsection{\texorpdfstring{getCurFieldHeader()}{getCurFieldHeader()}}
+{\footnotesize\ttfamily std\+::pair$<$ Header\+Field, std\+::string $>$ Csv\+Buffer\+::get\+Cur\+Field\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the type and value of the current field. 
+
+\begin{DoxyPrecond}{Precondition}
+headers has been initialized
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns a pair containing the Header\+Field type and the string value of the current field\textquotesingle{}s header
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+std\+::pair$<$\+Header\+Field, std\+::string$>$ 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_csv_buffer_a777518eb33a8dc3b2067c684bcee3cd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_csv_buffer_a639615afeee38796aea6132e2d761b14}\label{class_csv_buffer_a639615afeee38796aea6132e2d761b14}} 
+\index{CsvBuffer@{CsvBuffer}!init@{init}}
+\index{init@{init}!CsvBuffer@{CsvBuffer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Csv\+Buffer\+::init (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{instream }\end{DoxyParamCaption})}
+
+
+
+Performs the first read and extracts the headers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em instream} & stream to be read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+buffer is empty 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+headers contains the values returned by read\+Header~\newline
+ buffer contains one unprocessed record~\newline
+ curr points to the start of the record.~\newline
+ field\+Num is increased by one if the record contains more fields or is set to zero if the entire record has been read. 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_csv_buffer_a639615afeee38796aea6132e2d761b14_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_csv_buffer_a6df10886c1cf61154735afbc84a6ae07}\label{class_csv_buffer_a6df10886c1cf61154735afbc84a6ae07}} 
+\index{CsvBuffer@{CsvBuffer}!read@{read}}
+\index{read@{read}!CsvBuffer@{CsvBuffer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool Csv\+Buffer\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{instream }\end{DoxyParamCaption})}
+
+
+
+Reads one record into the buffer if there is data left in the stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em instream} & one record will be read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+instream is an open stream that contains data in a CSV format 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+buffer contains data to be unpacked ~\newline
+ instream points to next record or end of stream 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_csv_buffer_a6df10886c1cf61154735afbc84a6ae07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_csv_buffer_a4fc7e89cdb27af0d4673e90a9cfcd708}\label{class_csv_buffer_a4fc7e89cdb27af0d4673e90a9cfcd708}} 
+\index{CsvBuffer@{CsvBuffer}!readHeader@{readHeader}}
+\index{readHeader@{readHeader}!CsvBuffer@{CsvBuffer}}
+\doxysubsubsection{\texorpdfstring{readHeader()}{readHeader()}}
+{\footnotesize\ttfamily void Csv\+Buffer\+::read\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reads through the first record in the file and extracts the fields for use as metadata. 
+
+\begin{DoxyPrecond}{Precondition}
+headers is an empty vector and the buffer has had data read into it
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+headers contains the pairs of header field types and the values of the header fields~\newline
+ curr points to the first record~\newline
+ num\+Fields is equal to number of header fields found 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_csv_buffer_a4fc7e89cdb27af0d4673e90a9cfcd708_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_csv_buffer_a4fc7e89cdb27af0d4673e90a9cfcd708_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_csv_buffer_a5b50f55c56a5e70e0d7294a65aa5df11}\label{class_csv_buffer_a5b50f55c56a5e70e0d7294a65aa5df11}} 
+\index{CsvBuffer@{CsvBuffer}!unpack@{unpack}}
+\index{unpack@{unpack}!CsvBuffer@{CsvBuffer}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily bool Csv\+Buffer\+::unpack (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Reads a field and puts it into a string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em str} & the string that will hold the value of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true record has not had every field unpacked 
+
+false record has no more fields to unpack
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+curr is pointing to the start of a field str is an empty std\+::string
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+str contains the value of the field curr is pointing to the start of the next field or the end of the record 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_csv_buffer_a5b50f55c56a5e70e0d7294a65aa5df11_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_csv_buffer_a97c256a4b2c5e00764cb92b2d0720c57}\label{class_csv_buffer_a97c256a4b2c5e00764cb92b2d0720c57}} 
+\index{CsvBuffer@{CsvBuffer}!fieldNum@{fieldNum}}
+\index{fieldNum@{fieldNum}!CsvBuffer@{CsvBuffer}}
+\doxysubsubsection{\texorpdfstring{fieldNum}{fieldNum}}
+{\footnotesize\ttfamily size\+\_\+t Csv\+Buffer\+::field\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+number of records currently in the unprocessed part of the buffer 
+
+keeps track of how many fields of a record have been processed 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Csv\+Buffer.\+h\item 
+Csv\+Buffer.\+cpp\end{DoxyCompactItemize}

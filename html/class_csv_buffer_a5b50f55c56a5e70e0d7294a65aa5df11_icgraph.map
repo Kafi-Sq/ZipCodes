@@ -1,0 +1,6 @@
+<map id="CsvBuffer::unpack" name="CsvBuffer::unpack">
+<area shape="rect" id="node1" title="Reads a field and puts it into a string." alt="" coords="353,31,480,56"/>
+<area shape="rect" id="node2" href="$class_csv_buffer.html#a4fc7e89cdb27af0d4673e90a9cfcd708" title="Reads through the first record in the file and extracts the fields for use as metadata." alt="" coords="155,5,305,31"/>
+<area shape="rect" id="node4" href="$class_place.html#a8251513e094314f8532cda0919923281" title="Reads a record from the buffer and unpacks the fields into the class members." alt="" coords="177,55,283,80"/>
+<area shape="rect" id="node3" href="$class_csv_buffer.html#a639615afeee38796aea6132e2d761b14" title="Performs the first read and extracts the headers." alt="" coords="5,5,107,31"/>
+</map>

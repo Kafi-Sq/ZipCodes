@@ -1,0 +1,4 @@
+<map id="BlockBuffer::pack" name="BlockBuffer::pack">
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,129,38"/>
+<area shape="rect" id="node2" href="$class_length_indicated_buffer.html#a90ffd821ed52ea80bb279b0ff48060c4" title="Writes length of the field and the data in the buffer to the stream." alt="" coords="177,5,324,45"/>
+</map>

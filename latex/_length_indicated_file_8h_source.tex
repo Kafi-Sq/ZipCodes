@@ -1,0 +1,45 @@
+\hypertarget{_length_indicated_file_8h_source}{}\doxysection{Length\+Indicated\+File.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef LENGTHINDICATEDFILE\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define LENGTHINDICATEDFILE\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <optional>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}Header.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}LengthIndicatedBuffer.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}Place.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}PrimaryKey.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}enums.h"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_length_indicated_file}{LengthIndicatedFile}} \{}
+\DoxyCodeLine{19    \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{struct_header}{Header}} header;}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_primary_key}{PrimaryKey}} index;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer}} readBuf;}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer}} writeBuf;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     std::string fileName;}
+\DoxyCodeLine{27     std::fstream file;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} dataStart;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31    \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_length_indicated_file}{LengthIndicatedFile}}(std::string fileName);}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_length_indicated_file}{\string~LengthIndicatedFile}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} initializeBuffers();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} initializeIndex();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{bool} openDataFile();}
+\DoxyCodeLine{37     std::optional<Place> findRecord(std::string recordKey);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} generateIndex();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} indexFileExists();}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

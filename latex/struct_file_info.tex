@@ -1,0 +1,34 @@
+\hypertarget{struct_file_info}{}\doxysection{File\+Info Struct Reference}
+\label{struct_file_info}\index{FileInfo@{FileInfo}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_file_info_aa1efcbe59ac16964d3d28157fa06a679}\label{struct_file_info_aa1efcbe59ac16964d3d28157fa06a679}} 
+int {\bfseries length\+Indicator\+Size}
+\item 
+\mbox{\Hypertarget{struct_file_info_a7e99c20e9bb5f9c105875c3c7653966b}\label{struct_file_info_a7e99c20e9bb5f9c105875c3c7653966b}} 
+Length\+Indicator\+Type {\bfseries length\+Indicator\+Format}
+\begin{DoxyCompactList}\small\item\em number of bytes in length indicator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_file_info_a4161c9cf6024f8df13f7c92b7bf14c01}\label{struct_file_info_a4161c9cf6024f8df13f7c92b7bf14c01}} 
+int {\bfseries fields\+Per\+Record}
+\begin{DoxyCompactList}\small\item\em ASCII, BINARY, or BCD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_file_info_ac80ee57e1aea91f216d390e9435c4a0e}\label{struct_file_info_ac80ee57e1aea91f216d390e9435c4a0e}} 
+int {\bfseries primary\+Key\+Position}
+\begin{DoxyCompactList}\small\item\em number of fields in each record \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_file_info_a44336af500fa996e1e78ecb6a81627bc}\label{struct_file_info_a44336af500fa996e1e78ecb6a81627bc}} 
+char {\bfseries index\+File\+Name} \mbox{[}100\mbox{]}
+\begin{DoxyCompactList}\small\item\em the ordinal position of the primary key used to index the file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_file_info_a58d7e575ffea700793a88e2866dfa9c4}\label{struct_file_info_a58d7e575ffea700793a88e2866dfa9c4}} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&ins, \mbox{\hyperlink{struct_file_info}{File\+Info}} \&file\+Info)
+\begin{DoxyCompactList}\small\item\em the name of the index file to be loaded at program start \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_file_info_a4d3d34bfaccf792af40d730b8be595f2}\label{struct_file_info_a4d3d34bfaccf792af40d730b8be595f2}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{struct_file_info}{File\+Info}} \&file\+Info)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Header.\+h\end{DoxyCompactItemize}

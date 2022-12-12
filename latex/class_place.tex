@@ -1,0 +1,319 @@
+\hypertarget{class_place}{}\doxysection{Place Class Reference}
+\label{class_place}\index{Place@{Place}}
+
+
+Collaboration diagram for Place\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{class_place__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_place_a09badd1970b6ed375d6347c333791fe1}{Place}} (const \mbox{\hyperlink{class_place}{Place}} \&loc)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_place_a30af4f22a364a36210b0d6b9a62561a1}{get\+Zip\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Zip Code. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_place_a490c624a233118f90883626a7193deb9}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the 2 digit State Id. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_place_a8b76dadeaa484e0334a3288797efc76f}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{class_place}{Place}} Name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_place_a7c681bb04fc1577ead3381b82ed5f3d1}{get\+County}} () const
+\begin{DoxyCompactList}\small\item\em Returns the County. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_place_ae3f4dc1e2f30c4e745c184a58763c196}{get\+Lat}} () const
+\begin{DoxyCompactList}\small\item\em Returns the latitude. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_place_aa46179b1baf9d489e9b34043c90523d2}{get\+Longi}} () const
+\begin{DoxyCompactList}\small\item\em Returns the longitude. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_place_a8251513e094314f8532cda0919923281}{unpack}} (\mbox{\hyperlink{class_csv_buffer}{Csv\+Buffer}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Reads a record from the buffer and unpacks the fields into the class members. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_place_af76af3644870c3d2636e91e8d4da3187}{unpack}} (\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Reads a record from the buffer and unpacks the fields into the class members. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_place_a0ddb02b0ddd7d707ebf75e1fad6df69f}\label{class_place_a0ddb02b0ddd7d707ebf75e1fad6df69f}} 
+void {\bfseries pack} (\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}} \&buffer)
+\item 
+void \mbox{\hyperlink{class_place_a2f003d9543d3d046847df5b6b1de0680}{operator=}} (const \mbox{\hyperlink{class_place}{Place}} \&loc)
+\begin{DoxyCompactList}\small\item\em Assignment operator overload. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_place_acbd8bd0fa5d13bc872eedcc467f59e86}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em get size of object in bytes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_place_aec10ebca00ad65e86c7af909f1e80789}\label{class_place_aec10ebca00ad65e86c7af909f1e80789}} 
+void {\bfseries print} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_place_aa997072870757506b92fe0016f9e953e}\label{class_place_aa997072870757506b92fe0016f9e953e}} 
+std\+::string {\bfseries zipcode}
+\item 
+\mbox{\Hypertarget{class_place_a4424a4d56d07a9ab0afea62420c85ea1}\label{class_place_a4424a4d56d07a9ab0afea62420c85ea1}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{class_place_a5ff2bbd537f0482a20f4204c01c98508}\label{class_place_a5ff2bbd537f0482a20f4204c01c98508}} 
+std\+::string {\bfseries state}
+\item 
+\mbox{\Hypertarget{class_place_a2766fdea84e2cc6ab8a40ecde0154591}\label{class_place_a2766fdea84e2cc6ab8a40ecde0154591}} 
+std\+::string {\bfseries county}
+\item 
+\mbox{\Hypertarget{class_place_a85732b9887cdfac7cd775dda2f783220}\label{class_place_a85732b9887cdfac7cd775dda2f783220}} 
+double {\bfseries latitude}
+\item 
+\mbox{\Hypertarget{class_place_a75ab346df5a892708acd4570b851e9e7}\label{class_place_a75ab346df5a892708acd4570b851e9e7}} 
+double {\bfseries longitude}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_place_a09badd1970b6ed375d6347c333791fe1}\label{class_place_a09badd1970b6ed375d6347c333791fe1}} 
+\index{Place@{Place}!Place@{Place}}
+\index{Place@{Place}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{Place()}{Place()}}
+{\footnotesize\ttfamily Place\+::\+Place (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_place}{Place}} \&}]{loc }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_place_a09badd1970b6ed375d6347c333791fe1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_place_a7c681bb04fc1577ead3381b82ed5f3d1}\label{class_place_a7c681bb04fc1577ead3381b82ed5f3d1}} 
+\index{Place@{Place}!getCounty@{getCounty}}
+\index{getCounty@{getCounty}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{getCounty()}{getCounty()}}
+{\footnotesize\ttfamily string Place\+::get\+County (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the County. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_place_a7c681bb04fc1577ead3381b82ed5f3d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_ae3f4dc1e2f30c4e745c184a58763c196}\label{class_place_ae3f4dc1e2f30c4e745c184a58763c196}} 
+\index{Place@{Place}!getLat@{getLat}}
+\index{getLat@{getLat}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{getLat()}{getLat()}}
+{\footnotesize\ttfamily double Place\+::get\+Lat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the latitude. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_place_ae3f4dc1e2f30c4e745c184a58763c196_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_aa46179b1baf9d489e9b34043c90523d2}\label{class_place_aa46179b1baf9d489e9b34043c90523d2}} 
+\index{Place@{Place}!getLongi@{getLongi}}
+\index{getLongi@{getLongi}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{getLongi()}{getLongi()}}
+{\footnotesize\ttfamily double Place\+::get\+Longi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the longitude. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_place_aa46179b1baf9d489e9b34043c90523d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_a8b76dadeaa484e0334a3288797efc76f}\label{class_place_a8b76dadeaa484e0334a3288797efc76f}} 
+\index{Place@{Place}!getName@{getName}}
+\index{getName@{getName}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Place\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the \mbox{\hyperlink{class_place}{Place}} Name. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_place_a8b76dadeaa484e0334a3288797efc76f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_acbd8bd0fa5d13bc872eedcc467f59e86}\label{class_place_acbd8bd0fa5d13bc872eedcc467f59e86}} 
+\index{Place@{Place}!getSize@{getSize}}
+\index{getSize@{getSize}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily size\+\_\+t Place\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get size of object in bytes 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t size of object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_place_a490c624a233118f90883626a7193deb9}\label{class_place_a490c624a233118f90883626a7193deb9}} 
+\index{Place@{Place}!getState@{getState}}
+\index{getState@{getState}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily string Place\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the 2 digit State Id. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_place_a490c624a233118f90883626a7193deb9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_a30af4f22a364a36210b0d6b9a62561a1}\label{class_place_a30af4f22a364a36210b0d6b9a62561a1}} 
+\index{Place@{Place}!getZipCode@{getZipCode}}
+\index{getZipCode@{getZipCode}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{getZipCode()}{getZipCode()}}
+{\footnotesize\ttfamily string Place\+::get\+Zip\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the Zip Code. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_place_a30af4f22a364a36210b0d6b9a62561a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_a2f003d9543d3d046847df5b6b1de0680}\label{class_place_a2f003d9543d3d046847df5b6b1de0680}} 
+\index{Place@{Place}!operator=@{operator=}}
+\index{operator=@{operator=}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Place\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_place}{Place}} \&}]{loc }\end{DoxyParamCaption})}
+
+
+
+Assignment operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & The place object that this one\textquotesingle{}s parameters will match \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_place_a2f003d9543d3d046847df5b6b1de0680_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_a8251513e094314f8532cda0919923281}\label{class_place_a8251513e094314f8532cda0919923281}} 
+\index{Place@{Place}!unpack@{unpack}}
+\index{unpack@{unpack}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Place\+::unpack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_csv_buffer}{Csv\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Reads a record from the buffer and unpacks the fields into the class members. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em buffer} & The buffer to be read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+buffer has a record that contains zipcode, place name, state id, county, latitude, and longitude fields
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the member variables have been set to the values mentioned above, if the column with that name was found 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_place_a8251513e094314f8532cda0919923281_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_place_af76af3644870c3d2636e91e8d4da3187}\label{class_place_af76af3644870c3d2636e91e8d4da3187}} 
+\index{Place@{Place}!unpack@{unpack}}
+\index{unpack@{unpack}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Place\+::unpack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Reads a record from the buffer and unpacks the fields into the class members. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em buffer} & The buffer to be read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+buffer has a record that contains zipcode, place name, state id, county, latitude, and longitude fields
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the member variables have been set to the values mentioned above, if the column with that name was found 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_place_af76af3644870c3d2636e91e8d4da3187_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Place.\+h\item 
+Place.\+cpp\end{DoxyCompactItemize}

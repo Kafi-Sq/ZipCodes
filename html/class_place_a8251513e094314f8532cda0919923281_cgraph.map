@@ -1,0 +1,5 @@
+<map id="Place::unpack" name="Place::unpack">
+<area shape="rect" id="node1" title="Reads a record from the buffer and unpacks the fields into the class members." alt="" coords="5,31,111,56"/>
+<area shape="rect" id="node2" href="$class_csv_buffer.html#a777518eb33a8dc3b2067c684bcee3cd4" title="Gets the type and value of the current field." alt="" coords="159,5,349,31"/>
+<area shape="rect" id="node3" href="$class_csv_buffer.html#a5b50f55c56a5e70e0d7294a65aa5df11" title="Reads a field and puts it into a string." alt="" coords="191,55,317,80"/>
+</map>

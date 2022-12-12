@@ -1,0 +1,44 @@
+\hypertarget{_primary_key_8h_source}{}\doxysection{Primary\+Key.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Header.h"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_primary_key}{PrimaryKey}} \{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11    \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} notFound = -\/1;}
+\DoxyCodeLine{13     \textcolor{keyword}{enum} IndexFileFormat \{}
+\DoxyCodeLine{14         ASCII,}
+\DoxyCodeLine{15         BCD,}
+\DoxyCodeLine{16         BINARY}
+\DoxyCodeLine{17     \};}
+\DoxyCodeLine{18      \textcolor{keyword}{struct }\mbox{\hyperlink{struct_primary_key_1_1_index_file_header}{IndexFileHeader}} \{}
+\DoxyCodeLine{19         \textcolor{keywordtype}{int} version;}
+\DoxyCodeLine{20         \textcolor{keywordtype}{int} keyCount;}
+\DoxyCodeLine{21         \textcolor{keywordtype}{int} format;}
+\DoxyCodeLine{22     \};}
+\DoxyCodeLine{23     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_primary_key_1_1_key_struct}{KeyStruct}} \{}
+\DoxyCodeLine{24         std::string key;}
+\DoxyCodeLine{25         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset;}
+\DoxyCodeLine{26     \};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primary_key_a57f15735bee6ad0dbf8a4517ef4f9eb6}{GenerateIndexFile}}(std::string fileName);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_primary_key_a3cf571ff7e01481f12c3e6be6581deb7}{ReadIndexFile}}(std::string fileName);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primary_key_ae9e1740f447b73a12ee8ba92abd1bbd2}{Add}}(\mbox{\hyperlink{struct_primary_key_1_1_key_struct}{KeyStruct}} keyStruct);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_primary_key_a1f8d9055235dcae267dd799b855ca3f0}{Find}}(std::string key);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_primary_key_ad9939e0d64933fa47cdc3bb5074d0802}{BinarySearch}}(std::string str);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72    \textcolor{keyword}{private}:}
+\DoxyCodeLine{73     std::vector<KeyStruct> vKey;}
+\DoxyCodeLine{74     \textcolor{keywordtype}{bool} isSorted = \textcolor{keyword}{false};}
+\DoxyCodeLine{75     \mbox{\hyperlink{struct_primary_key_1_1_index_file_header}{IndexFileHeader}} header;}
+\DoxyCodeLine{76 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,33 @@
+\hypertarget{enums_8h_source}{}\doxysection{enums.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef ENUMS\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define ENUMS\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{// used for tiny csv parsing state machine}}
+\DoxyCodeLine{8 \textcolor{keyword}{enum class} CSVState \{}
+\DoxyCodeLine{9     QuotedField,}
+\DoxyCodeLine{10     UnquotedField,}
+\DoxyCodeLine{11     QuotedQuote}
+\DoxyCodeLine{12 \};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{15 \textcolor{keyword}{enum class} HeaderField : \textcolor{keywordtype}{int} \{}
+\DoxyCodeLine{16     ZipCode,}
+\DoxyCodeLine{17     PlaceName,}
+\DoxyCodeLine{18     State,}
+\DoxyCodeLine{19     County,}
+\DoxyCodeLine{20     Latitude,}
+\DoxyCodeLine{21     Longitude,}
+\DoxyCodeLine{22     Unknown}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{enum class} LengthIndicatorType : \textcolor{keywordtype}{int} \{}
+\DoxyCodeLine{26     ASCII,}
+\DoxyCodeLine{27     BCD,}
+\DoxyCodeLine{28     BINARY}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+<map id="CsvBuffer::readHeader" name="CsvBuffer::readHeader">
+<area shape="rect" id="node1" title="Reads through the first record in the file and extracts the fields for use as metadata." alt="" coords="155,5,305,31"/>
+<area shape="rect" id="node2" href="$class_csv_buffer.html#a639615afeee38796aea6132e2d761b14" title="Performs the first read and extracts the headers." alt="" coords="5,5,107,31"/>
+</map>

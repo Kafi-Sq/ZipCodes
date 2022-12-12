@@ -13,6 +13,7 @@
 #include "LengthIndicatedFile.h"
 #include "Place.h"
 #include "PrimaryKey.h"
+#include "BlockedFile.h"
 
 /**
  * @brief adding more space between each fields

@@ -1,0 +1,5 @@
+<map id="Place::getZipCode" name="Place::getZipCode">
+<area shape="rect" id="node1" title="Returns the Zip Code." alt="" coords="172,31,300,56"/>
+<area shape="rect" id="node2" href="$class_place.html#a2f003d9543d3d046847df5b6b1de0680" title="Assignment operator overload." alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node3" href="$class_place.html#a09badd1970b6ed375d6347c333791fe1" title="Copy constructor." alt="" coords="17,55,113,80"/>
+</map>

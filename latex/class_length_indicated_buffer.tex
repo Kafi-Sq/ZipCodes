@@ -1,0 +1,440 @@
+\hypertarget{class_length_indicated_buffer}{}\doxysection{Length\+Indicated\+Buffer Class Reference}
+\label{class_length_indicated_buffer}\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+
+
+Collaboration diagram for Length\+Indicated\+Buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_length_indicated_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_length_indicated_buffer_a59fd057cb47d56c0aec23e92dfd6e8ca}{Length\+Indicated\+Buffer}} (const char delim=\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_length_indicated_buffer_a7fc9db4e8298e47993c001fe78f1c05a}{read}} (std\+::istream \&instream)
+\begin{DoxyCompactList}\small\item\em Read a single length indicated record into the buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_length_indicated_buffer_a3da5902b9f4227fb3a61d947f6540a85}{read}} (std\+::istream \&instream, int index\+Offset)
+\begin{DoxyCompactList}\small\item\em Seek to the specified offset in the file and read a single length indicated record into the buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_length_indicated_buffer_ae7a2bd9067a7017a3a1810922e981b09}{unpack}} (std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Reads a field and puts it into a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_length_indicated_buffer_a0a105a867458c3bf54c1344a6c7d18a6}{pack}} (const std\+::string str)
+\begin{DoxyCompactList}\small\item\em Packs a field into the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_length_indicated_buffer_a90ffd821ed52ea80bb279b0ff48060c4}{write}} (std\+::ostream \&outstream)
+\begin{DoxyCompactList}\small\item\em Writes length of the field and the data in the buffer to the stream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_length_indicated_buffer_a8b7f71437dc17f991332c22224cc601e}{init}} (std\+::istream \&instream)
+\begin{DoxyCompactList}\small\item\em read and extract the header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_length_indicated_buffer_a9e8045480b2df9f214069b3e1c594485}{write\+Header}} (std\+::ostream \&outstream)
+\begin{DoxyCompactList}\small\item\em Seeks to the start of the stream and writes the header member to the stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_length_indicated_buffer_a4fe88cd0641786d94802c7d5aaf2152f}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Sets curr to start of buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_length_indicated_buffer_ab0d5e941b8b185084b0288405f887fa7}{check\+File\+Type}} (std\+::istream \&instream)
+\begin{DoxyCompactList}\small\item\em read the first 4 bytes of the file and check against the magic number. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_length_indicated_buffer_a94a014a6edabdd32e6eeb7419c976261}{get\+Index\+File\+Name}} ()
+\begin{DoxyCompactList}\small\item\em get the name of the index file from the header \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_field_info}{Field\+Info}} \mbox{\hyperlink{class_length_indicated_buffer_a802655e5b84553d1396cd3d9d41504df}{get\+Cur\+Field\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type and value of the current field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_a7d12d9873a39202127cc984e71e467b1}\label{class_length_indicated_buffer_a7d12d9873a39202127cc984e71e467b1}} 
+\mbox{\hyperlink{struct_header}{Header}} {\bfseries header}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_a502911508a989befdcd953e5ea85856d}\label{class_length_indicated_buffer_a502911508a989befdcd953e5ea85856d}} 
+const char {\bfseries delim}
+\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_aef15b77bd0b217984cfcd4247c44add1}\label{class_length_indicated_buffer_aef15b77bd0b217984cfcd4247c44add1}} 
+int {\bfseries record\+Length}
+\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_a1a31cbcbe46eba540713003acf32e1cf}\label{class_length_indicated_buffer_a1a31cbcbe46eba540713003acf32e1cf}} 
+bool {\bfseries initialized} = false
+\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_a27c796cb731f3c4cb75c1fea97763098}\label{class_length_indicated_buffer_a27c796cb731f3c4cb75c1fea97763098}} 
+char {\bfseries buffer} \mbox{[}1000\mbox{]}
+\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_ac8ba3b4e788d9fbbc11fe8d4337367bb}\label{class_length_indicated_buffer_ac8ba3b4e788d9fbbc11fe8d4337367bb}} 
+int {\bfseries curr}
+\begin{DoxyCompactList}\small\item\em holds the position of the start of unprocessed fields \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_a73124c7d0f8d084dced6059a798542d0}\label{class_length_indicated_buffer_a73124c7d0f8d084dced6059a798542d0}} 
+size\+\_\+t {\bfseries field\+Num} = 0
+\begin{DoxyCompactList}\small\item\em keeps track of how many fields of a record have been processed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_length_indicated_buffer_a71a375a5f2c20505c958a2f8f0a05ecf}\label{class_length_indicated_buffer_a71a375a5f2c20505c958a2f8f0a05ecf}} 
+size\+\_\+t {\bfseries num\+Fields}
+\begin{DoxyCompactList}\small\item\em number of fields in each record \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_length_indicated_buffer_a59fd057cb47d56c0aec23e92dfd6e8ca}\label{class_length_indicated_buffer_a59fd057cb47d56c0aec23e92dfd6e8ca}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{LengthIndicatedBuffer()}{LengthIndicatedBuffer()}}
+{\footnotesize\ttfamily Length\+Indicated\+Buffer\+::\+Length\+Indicated\+Buffer (\begin{DoxyParamCaption}\item[{const char}]{delim = {\ttfamily \textquotesingle{},\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delim} & The delimiter used between the record fields \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_length_indicated_buffer_a59fd057cb47d56c0aec23e92dfd6e8ca_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_length_indicated_buffer_ab0d5e941b8b185084b0288405f887fa7}\label{class_length_indicated_buffer_ab0d5e941b8b185084b0288405f887fa7}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!checkFileType@{checkFileType}}
+\index{checkFileType@{checkFileType}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{checkFileType()}{checkFileType()}}
+{\footnotesize\ttfamily bool Length\+Indicated\+Buffer\+::check\+File\+Type (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{instream }\end{DoxyParamCaption})}
+
+
+
+read the first 4 bytes of the file and check against the magic number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em instream} & stream to be read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+instream is open for reading
+\end{DoxyPrecond}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if file has correct magic number \\
+\hline
+{\em false} & if file does not have correct magic number \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_length_indicated_buffer_ab0d5e941b8b185084b0288405f887fa7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_a4fe88cd0641786d94802c7d5aaf2152f}\label{class_length_indicated_buffer_a4fe88cd0641786d94802c7d5aaf2152f}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!clear@{clear}}
+\index{clear@{clear}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Length\+Indicated\+Buffer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets curr to start of buffer. 
+
+\begin{DoxyPostcond}{Postcondition}
+curr = 0 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_length_indicated_buffer_a4fe88cd0641786d94802c7d5aaf2152f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_a802655e5b84553d1396cd3d9d41504df}\label{class_length_indicated_buffer_a802655e5b84553d1396cd3d9d41504df}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!getCurFieldHeader@{getCurFieldHeader}}
+\index{getCurFieldHeader@{getCurFieldHeader}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{getCurFieldHeader()}{getCurFieldHeader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_field_info}{Field\+Info}} Length\+Indicated\+Buffer\+::get\+Cur\+Field\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the type and value of the current field. 
+
+\begin{DoxyPrecond}{Precondition}
+headers has been initialized
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns a \mbox{\hyperlink{struct_field_info}{Field\+Info}} struct with the field name and field type
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_field_info}{Field\+Info}} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_length_indicated_buffer_a802655e5b84553d1396cd3d9d41504df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_a94a014a6edabdd32e6eeb7419c976261}\label{class_length_indicated_buffer_a94a014a6edabdd32e6eeb7419c976261}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!getIndexFileName@{getIndexFileName}}
+\index{getIndexFileName@{getIndexFileName}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{getIndexFileName()}{getIndexFileName()}}
+{\footnotesize\ttfamily std\+::string Length\+Indicated\+Buffer\+::get\+Index\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the name of the index file from the header 
+
+\begin{DoxyPrecond}{Precondition}
+initialized = true
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+string containing index file name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_length_indicated_buffer_a8b7f71437dc17f991332c22224cc601e}\label{class_length_indicated_buffer_a8b7f71437dc17f991332c22224cc601e}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!init@{init}}
+\index{init@{init}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Length\+Indicated\+Buffer\+::init (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{instream }\end{DoxyParamCaption})}
+
+
+
+read and extract the header. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em instream} & stream to be read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+instream points to a valid length indicated file opened for reading 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+header has been loaded with the values from the stream 
+
+initialized has been set to true if header read was successful, false if it was not ~\newline
+
+\end{DoxyPostcond}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & header read was successful \\
+\hline
+{\em false} & header read was not successful \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_length_indicated_buffer_a8b7f71437dc17f991332c22224cc601e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_a0a105a867458c3bf54c1344a6c7d18a6}\label{class_length_indicated_buffer_a0a105a867458c3bf54c1344a6c7d18a6}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!pack@{pack}}
+\index{pack@{pack}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{pack()}{pack()}}
+{\footnotesize\ttfamily void Length\+Indicated\+Buffer\+::pack (\begin{DoxyParamCaption}\item[{const std\+::string}]{str }\end{DoxyParamCaption})}
+
+
+
+Packs a field into the buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & the string that will holds the value of the field\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+str is of the correct type indicated by headers\mbox{[}field\+Num\mbox{]}.field\+Type
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+if the field is not the first, buffer has had a comma and the data from str minus the null terminator added 
+
+if the field is first, buffer has had the data from str minus the null terminator added 
+
+curr points to the first position in buffer after the newly added field 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_length_indicated_buffer_a7fc9db4e8298e47993c001fe78f1c05a}\label{class_length_indicated_buffer_a7fc9db4e8298e47993c001fe78f1c05a}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!read@{read}}
+\index{read@{read}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Length\+Indicated\+Buffer\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{instream }\end{DoxyParamCaption})}
+
+
+
+Read a single length indicated record into the buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em instream} & the stream that points to the record\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+instream is an open stream pointing to the start of a length indicated record 
+
+record size \texorpdfstring{$<$}{<} sizeof(buffer) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+instream is positioned at the start of the next record or the end of the stream 
+
+curr is set to 0 and buffer is zeroed
+\end{DoxyPostcond}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & when instream.\+good() is true (indicating that we can read another record) \\
+\hline
+{\em false} & when instream.\+good() is false (indicating that we are probably at the end of the file) \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_length_indicated_buffer_a7fc9db4e8298e47993c001fe78f1c05a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_length_indicated_buffer_a7fc9db4e8298e47993c001fe78f1c05a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_a3da5902b9f4227fb3a61d947f6540a85}\label{class_length_indicated_buffer_a3da5902b9f4227fb3a61d947f6540a85}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!read@{read}}
+\index{read@{read}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Length\+Indicated\+Buffer\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{instream,  }\item[{int}]{index\+Offset }\end{DoxyParamCaption})}
+
+
+
+Seek to the specified offset in the file and read a single length indicated record into the buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em instream} & the stream that points to the record \\
+\hline
+\mbox{\texttt{ in}}  & {\em index\+Offset} & the number of bytes from the start of the file to seek to before reading\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+instream is an open stream pointing to the start of a length indicated record 
+
+index\+Offset is the number of bytes from the start of the file to the start of a valid length indicated record
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+instream is positioned at the start of the next record or the end of the stream
+\end{DoxyPostcond}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & when instream.\+good() is true (indicating that we can read another record) \\
+\hline
+{\em false} & when instream.\+good() is false (indicating that we are probably at the end of the file) \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_length_indicated_buffer_a3da5902b9f4227fb3a61d947f6540a85_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_ae7a2bd9067a7017a3a1810922e981b09}\label{class_length_indicated_buffer_ae7a2bd9067a7017a3a1810922e981b09}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!unpack@{unpack}}
+\index{unpack@{unpack}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily bool Length\+Indicated\+Buffer\+::unpack (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Reads a field and puts it into a string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em str} & the string that will hold the value of the field\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+curr is pointing to the start of a field str is an empty std\+::string
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+str contains the value of the field 
+
+curr is pointing to the start of the next field or the next record 
+
+field\+Num is pointing to the type of the next field
+\end{DoxyPostcond}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & record has not had every field unpacked \\
+\hline
+{\em false} & record has no more fields to unpack \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_length_indicated_buffer_ae7a2bd9067a7017a3a1810922e981b09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_a90ffd821ed52ea80bb279b0ff48060c4}\label{class_length_indicated_buffer_a90ffd821ed52ea80bb279b0ff48060c4}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!write@{write}}
+\index{write@{write}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Length\+Indicated\+Buffer\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{outstream }\end{DoxyParamCaption})}
+
+
+
+Writes length of the field and the data in the buffer to the stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & the string that will holds the value of the field\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+str is of the correct type indicated by headers\mbox{[}field\+Num\mbox{]}.field\+Type
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_length_indicated_buffer_a90ffd821ed52ea80bb279b0ff48060c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_length_indicated_buffer_a9e8045480b2df9f214069b3e1c594485}\label{class_length_indicated_buffer_a9e8045480b2df9f214069b3e1c594485}} 
+\index{LengthIndicatedBuffer@{LengthIndicatedBuffer}!writeHeader@{writeHeader}}
+\index{writeHeader@{writeHeader}!LengthIndicatedBuffer@{LengthIndicatedBuffer}}
+\doxysubsubsection{\texorpdfstring{writeHeader()}{writeHeader()}}
+{\footnotesize\ttfamily void Length\+Indicated\+Buffer\+::write\+Header (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{outstream }\end{DoxyParamCaption})}
+
+
+
+Seeks to the start of the stream and writes the header member to the stream. 
+
+\begin{DoxyPostcond}{Postcondition}
+outstream is pointing to the first byte after the header
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em outstream} & the stream to be written to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Length\+Indicated\+Buffer.\+h\item 
+Length\+Indicated\+Buffer.\+cpp\end{DoxyCompactItemize}

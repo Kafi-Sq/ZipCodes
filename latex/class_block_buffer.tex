@@ -1,0 +1,382 @@
+\hypertarget{class_block_buffer}{}\doxysection{Block\+Buffer Class Reference}
+\label{class_block_buffer}\index{BlockBuffer@{BlockBuffer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_block_buffer_aae9f4d41232b4301c24417d6060517ad}{process\+Block\+Header}} ()
+\item 
+void \mbox{\hyperlink{class_block_buffer_ab22a13eb521fd8e981877c8f902893ec}{set\+Block\+Header}} (Block\+Header \mbox{\hyperlink{class_block_buffer_ac7df6b18a950a7d1989cd194283402da}{block\+Header}})
+\item 
+\mbox{\hyperlink{class_block_buffer_a3d5a7c89997cd3b87e853c03b31fa115}{Block\+Buffer}} ()=default
+\item 
+\mbox{\hyperlink{class_block_buffer_a414392a969a1b20bb5b4f550290499e2}{Block\+Buffer}} (Block\+File\+Header \&\mbox{\hyperlink{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}{header}})
+\item 
+bool \mbox{\hyperlink{class_block_buffer_a9a4c0ace2c226fdc197e4d2eb3d30be5}{read}} (istream \&file, int \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}})
+\item 
+void \mbox{\hyperlink{class_block_buffer_a968d2b19d9419fcfe7ecedc65d08b09a}{write}} (ostream \&file, int \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}})
+\item 
+bool \mbox{\hyperlink{class_block_buffer_a9cd55305a80614f98178dc65c4d8b6c3}{unpack}} (\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}}$<$ Block\+File\+Header $>$ \&l\+Buf)
+\item 
+void \mbox{\hyperlink{class_block_buffer_a5a5d18159ff5ff169c6d94b06dfeab23}{pack}} (\mbox{\hyperlink{class_place_block}{Place\+Block}} pb, \mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}}$<$ Block\+File\+Header $>$ \&l\+Buf)
+\item 
+void \mbox{\hyperlink{class_block_buffer_a29404e25aad8553fa429052b7bc2e765}{pack}} (\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}}$<$ Block\+File\+Header $>$ \&l\+Buf)
+\item 
+void \mbox{\hyperlink{class_block_buffer_ac891e2acc41ddfec1b4e5c3d622d84a6}{set\+Preceding\+Block}} (int \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}})
+\item 
+void \mbox{\hyperlink{class_block_buffer_a61703a4a1dd5eee8250072f98c9d0c95}{set\+Succeeding\+Block}} (int \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}})
+\item 
+void \mbox{\hyperlink{class_block_buffer_ae6b6209ee18853f89260633b380c41bf}{clear}} ()
+\item 
+\mbox{\Hypertarget{class_block_buffer_a621956b5f0816d3d7ebdd2ce56588ebd}\label{class_block_buffer_a621956b5f0816d3d7ebdd2ce56588ebd}} 
+void {\bfseries init} (Block\+File\+Header \&\mbox{\hyperlink{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}{header}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_block_buffer_a4ffec543646c7338073c5cb9ac0d1081}\label{class_block_buffer_a4ffec543646c7338073c5cb9ac0d1081}} 
+std\+::vector$<$ char $>$ {\bfseries buffer}
+\item 
+Block\+File\+Header \mbox{\hyperlink{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}{header}}
+\item 
+Block\+Header \mbox{\hyperlink{class_block_buffer_ac7df6b18a950a7d1989cd194283402da}{block\+Header}}
+\item 
+int \mbox{\hyperlink{class_block_buffer_a2d76942e2e4b234b4cc71fe023d54a2e}{unpacked\+Records}} = 0
+\item 
+int \mbox{\hyperlink{class_block_buffer_a2d60154ffe9371a26447c44a8c22d811}{curr}} = 0
+\item 
+int \mbox{\hyperlink{class_block_buffer_a97954e888186e4ff0e0724db1b622cce}{length}} = 0
+\item 
+int \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_block_buffer_aec0d79f9c2e900d6ca6fdf4f586c69be}{read}} (istream \&file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_block_buffer_a3d5a7c89997cd3b87e853c03b31fa115}\label{class_block_buffer_a3d5a7c89997cd3b87e853c03b31fa115}} 
+\index{BlockBuffer@{BlockBuffer}!BlockBuffer@{BlockBuffer}}
+\index{BlockBuffer@{BlockBuffer}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{BlockBuffer()}{BlockBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Block\+Buffer\+::\+Block\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+default contructor \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+class comes as defined 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_block_buffer_a414392a969a1b20bb5b4f550290499e2}\label{class_block_buffer_a414392a969a1b20bb5b4f550290499e2}} 
+\index{BlockBuffer@{BlockBuffer}!BlockBuffer@{BlockBuffer}}
+\index{BlockBuffer@{BlockBuffer}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{BlockBuffer()}{BlockBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Block\+Buffer\+::\+Block\+Buffer (\begin{DoxyParamCaption}\item[{Block\+File\+Header \&}]{header }\end{DoxyParamCaption})}
+
+constructor that specifies a header for the file 
+\begin{DoxyParams}{Parameters}
+{\em header} & the header to set in-\/class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+class has custom file header 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_block_buffer_ae6b6209ee18853f89260633b380c41bf}\label{class_block_buffer_ae6b6209ee18853f89260633b380c41bf}} 
+\index{BlockBuffer@{BlockBuffer}!clear@{clear}}
+\index{clear@{clear}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Block\+Buffer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+resets the buffer \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+empties the buffer and sets variables accordingly 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_block_buffer_ae6b6209ee18853f89260633b380c41bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_block_buffer_a29404e25aad8553fa429052b7bc2e765}\label{class_block_buffer_a29404e25aad8553fa429052b7bc2e765}} 
+\index{BlockBuffer@{BlockBuffer}!pack@{pack}}
+\index{pack@{pack}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{pack()}{pack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Block\+Buffer\+::pack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}}$<$ Block\+File\+Header $>$ \&}]{l\+Buf }\end{DoxyParamCaption})}
+
+packs data into the block buffer 
+\begin{DoxyParams}{Parameters}
+{\em l\+Buf} & length buffer where data is retrieved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+data is packed into block buffer 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_block_buffer_a29404e25aad8553fa429052b7bc2e765_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_block_buffer_a5a5d18159ff5ff169c6d94b06dfeab23}\label{class_block_buffer_a5a5d18159ff5ff169c6d94b06dfeab23}} 
+\index{BlockBuffer@{BlockBuffer}!pack@{pack}}
+\index{pack@{pack}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{pack()}{pack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Block\+Buffer\+::pack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_place_block}{Place\+Block}}}]{pb,  }\item[{\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}}$<$ Block\+File\+Header $>$ \&}]{l\+Buf }\end{DoxyParamCaption})}
+
+packs data into block buffer for entire block 
+\begin{DoxyParams}{Parameters}
+{\em pb} & place block class used to find all lines of block \\
+\hline
+{\em l\+Buf} & length buffer that gets data taken from it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+data is packed into block buffer 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{class_block_buffer_a5a5d18159ff5ff169c6d94b06dfeab23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{class_block_buffer_a5a5d18159ff5ff169c6d94b06dfeab23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_block_buffer_aae9f4d41232b4301c24417d6060517ad}\label{class_block_buffer_aae9f4d41232b4301c24417d6060517ad}} 
+\index{BlockBuffer@{BlockBuffer}!processBlockHeader@{processBlockHeader}}
+\index{processBlockHeader@{processBlockHeader}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{processBlockHeader()}{processBlockHeader()}}
+{\footnotesize\ttfamily void Block\+Buffer\+::process\+Block\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+keeps track of the record block number processes the block header \begin{DoxyPrecond}{Precondition}
+buffer contains block of records 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+places block header at beginning of block 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_block_buffer_aec0d79f9c2e900d6ca6fdf4f586c69be}\label{class_block_buffer_aec0d79f9c2e900d6ca6fdf4f586c69be}} 
+\index{BlockBuffer@{BlockBuffer}!read@{read}}
+\index{read@{read}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Block\+Buffer\+::read (\begin{DoxyParamCaption}\item[{istream \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+reads the data in the file 
+\begin{DoxyParams}{Parameters}
+{\em file} & file to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+reads data into buffer. returns true or false based on if file was opened and read or not 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_block_buffer_aec0d79f9c2e900d6ca6fdf4f586c69be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_block_buffer_aec0d79f9c2e900d6ca6fdf4f586c69be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_block_buffer_a9a4c0ace2c226fdc197e4d2eb3d30be5}\label{class_block_buffer_a9a4c0ace2c226fdc197e4d2eb3d30be5}} 
+\index{BlockBuffer@{BlockBuffer}!read@{read}}
+\index{read@{read}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Block\+Buffer\+::read (\begin{DoxyParamCaption}\item[{istream \&}]{file,  }\item[{int}]{RBN }\end{DoxyParamCaption})}
+
+function that reads a particular record block number 
+\begin{DoxyParams}{Parameters}
+{\em file} & the file to be read \\
+\hline
+{\em RBN} & the record block number to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns success or failure 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_block_buffer_a9a4c0ace2c226fdc197e4d2eb3d30be5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_block_buffer_ab22a13eb521fd8e981877c8f902893ec}\label{class_block_buffer_ab22a13eb521fd8e981877c8f902893ec}} 
+\index{BlockBuffer@{BlockBuffer}!setBlockHeader@{setBlockHeader}}
+\index{setBlockHeader@{setBlockHeader}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{setBlockHeader()}{setBlockHeader()}}
+{\footnotesize\ttfamily void Block\+Buffer\+::set\+Block\+Header (\begin{DoxyParamCaption}\item[{Block\+Header}]{block\+Header }\end{DoxyParamCaption})}
+
+function used to determine contents of block header 
+\begin{DoxyParams}{Parameters}
+{\em block\+Header} & block header to be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+sets in-\/class block header to equal block header placced into function 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_block_buffer_ac891e2acc41ddfec1b4e5c3d622d84a6}\label{class_block_buffer_ac891e2acc41ddfec1b4e5c3d622d84a6}} 
+\index{BlockBuffer@{BlockBuffer}!setPrecedingBlock@{setPrecedingBlock}}
+\index{setPrecedingBlock@{setPrecedingBlock}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{setPrecedingBlock()}{setPrecedingBlock()}}
+{\footnotesize\ttfamily void Block\+Buffer\+::set\+Preceding\+Block (\begin{DoxyParamCaption}\item[{int}]{RBN }\end{DoxyParamCaption})}
+
+sets previous block number to the argument RBN 
+\begin{DoxyParams}{Parameters}
+{\em RBN} & block number of previous block to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+sets preceding block to the value of RBN 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_block_buffer_a61703a4a1dd5eee8250072f98c9d0c95}\label{class_block_buffer_a61703a4a1dd5eee8250072f98c9d0c95}} 
+\index{BlockBuffer@{BlockBuffer}!setSucceedingBlock@{setSucceedingBlock}}
+\index{setSucceedingBlock@{setSucceedingBlock}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{setSucceedingBlock()}{setSucceedingBlock()}}
+{\footnotesize\ttfamily void Block\+Buffer\+::set\+Succeeding\+Block (\begin{DoxyParamCaption}\item[{int}]{RBN }\end{DoxyParamCaption})}
+
+sets next block number to the argument RBN 
+\begin{DoxyParams}{Parameters}
+{\em RBN} & block number of next block to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+sets succeeding block to the value of RBN 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_block_buffer_a9cd55305a80614f98178dc65c4d8b6c3}\label{class_block_buffer_a9cd55305a80614f98178dc65c4d8b6c3}} 
+\index{BlockBuffer@{BlockBuffer}!unpack@{unpack}}
+\index{unpack@{unpack}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily bool Block\+Buffer\+::unpack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}}$<$ Block\+File\+Header $>$ \&}]{l\+Buf }\end{DoxyParamCaption})}
+
+unpacking buffer data into a length buffer 
+\begin{DoxyParams}{Parameters}
+{\em l\+Buf} & the length buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+data must be in the block buffer 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+data is read into the length buffer and returns true or false based on success 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_block_buffer_a9cd55305a80614f98178dc65c4d8b6c3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_block_buffer_a968d2b19d9419fcfe7ecedc65d08b09a}\label{class_block_buffer_a968d2b19d9419fcfe7ecedc65d08b09a}} 
+\index{BlockBuffer@{BlockBuffer}!write@{write}}
+\index{write@{write}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Block\+Buffer\+::write (\begin{DoxyParamCaption}\item[{ostream \&}]{file,  }\item[{int}]{RBN }\end{DoxyParamCaption})}
+
+function that writes to a particular block 
+\begin{DoxyParams}{Parameters}
+{\em file} & the file to write to \\
+\hline
+{\em RBN} & desired record block number to write to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+writes data in desired file and block 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_block_buffer_ac7df6b18a950a7d1989cd194283402da}\label{class_block_buffer_ac7df6b18a950a7d1989cd194283402da}} 
+\index{BlockBuffer@{BlockBuffer}!blockHeader@{blockHeader}}
+\index{blockHeader@{blockHeader}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{blockHeader}{blockHeader}}
+{\footnotesize\ttfamily Block\+Header Block\+Buffer\+::block\+Header}
+
+file header \mbox{\Hypertarget{class_block_buffer_a2d60154ffe9371a26447c44a8c22d811}\label{class_block_buffer_a2d60154ffe9371a26447c44a8c22d811}} 
+\index{BlockBuffer@{BlockBuffer}!curr@{curr}}
+\index{curr@{curr}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{curr}{curr}}
+{\footnotesize\ttfamily int Block\+Buffer\+::curr = 0}
+
+records in buffer that remain unpacked \mbox{\Hypertarget{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}\label{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}} 
+\index{BlockBuffer@{BlockBuffer}!header@{header}}
+\index{header@{header}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily Block\+File\+Header Block\+Buffer\+::header}
+
+buffer itself \mbox{\Hypertarget{class_block_buffer_a97954e888186e4ff0e0724db1b622cce}\label{class_block_buffer_a97954e888186e4ff0e0724db1b622cce}} 
+\index{BlockBuffer@{BlockBuffer}!length@{length}}
+\index{length@{length}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily int Block\+Buffer\+::length = 0}
+
+current position in buffer \mbox{\Hypertarget{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}\label{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}} 
+\index{BlockBuffer@{BlockBuffer}!RBN@{RBN}}
+\index{RBN@{RBN}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{RBN}{RBN}}
+{\footnotesize\ttfamily int Block\+Buffer\+::\+RBN}
+
+length of content in buffer \mbox{\Hypertarget{class_block_buffer_a2d76942e2e4b234b4cc71fe023d54a2e}\label{class_block_buffer_a2d76942e2e4b234b4cc71fe023d54a2e}} 
+\index{BlockBuffer@{BlockBuffer}!unpackedRecords@{unpackedRecords}}
+\index{unpackedRecords@{unpackedRecords}!BlockBuffer@{BlockBuffer}}
+\doxysubsubsection{\texorpdfstring{unpackedRecords}{unpackedRecords}}
+{\footnotesize\ttfamily int Block\+Buffer\+::unpacked\+Records = 0}
+
+header for the block 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+block\+Buffer.\+h\item 
+block\+Buffer.\+cpp\end{DoxyCompactItemize}

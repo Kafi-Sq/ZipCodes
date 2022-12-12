@@ -1,0 +1,57 @@
+\hypertarget{_place_8h_source}{}\doxysection{Place.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef PLACE\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define PLACE\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}CsvBuffer.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}LengthIndicatedBuffer.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{comment}{/* This file contains the record details like zipcode, State ID, longitude and latitude.}}
+\DoxyCodeLine{13 \textcolor{comment}{We have the unpack and read functions that}}
+\DoxyCodeLine{14 \textcolor{comment}{puts the data from CSV file into the buffer and reads the data from CSV file. */}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_place}{Place}} \{}
+\DoxyCodeLine{16    \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_place}{Place}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{24     \mbox{\hyperlink{class_place}{Place}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_place}{Place}}\& loc);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{31     std::string \mbox{\hyperlink{class_place_a30af4f22a364a36210b0d6b9a62561a1}{getZipCode}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38     std::string \mbox{\hyperlink{class_place_a490c624a233118f90883626a7193deb9}{getState}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{45     std::string \mbox{\hyperlink{class_place_a8b76dadeaa484e0334a3288797efc76f}{getName}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52     std::string \mbox{\hyperlink{class_place_a7c681bb04fc1577ead3381b82ed5f3d1}{getCounty}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_place_ae3f4dc1e2f30c4e745c184a58763c196}{getLat}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_place_aa46179b1baf9d489e9b34043c90523d2}{getLongi}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_place_a8251513e094314f8532cda0919923281}{unpack}}(\mbox{\hyperlink{class_csv_buffer}{CsvBuffer}}\& buffer);}
+\DoxyCodeLine{78     }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_place_a8251513e094314f8532cda0919923281}{unpack}}(\mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer}}\& buffer);}
+\DoxyCodeLine{89     }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} pack(\mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer}}\& buffer);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_place_a2f003d9543d3d046847df5b6b1de0680}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_place}{Place}}\& loc);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_place_acbd8bd0fa5d13bc872eedcc467f59e86}{getSize}}();}
+\DoxyCodeLine{105     }
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108    \textcolor{keyword}{private}:}
+\DoxyCodeLine{109     std::string zipcode;}
+\DoxyCodeLine{110     std::string name;}
+\DoxyCodeLine{111     std::string state;}
+\DoxyCodeLine{112     std::string county;}
+\DoxyCodeLine{113     \textcolor{keywordtype}{double} latitude;}
+\DoxyCodeLine{114     \textcolor{keywordtype}{double} longitude;}
+\DoxyCodeLine{115 \};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

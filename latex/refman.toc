@@ -1,0 +1,114 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}readme}{1}{chapter.1}%
+\contentsline {subsection}{\numberline {1.0.1}For example, using these two zip codes on the file provided, the output will look like}{1}{subsection.1.0.1}%
+\contentsline {subsection}{\numberline {1.0.2}Zip Place Name\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State County Latitude Longitude}{1}{subsection.1.0.2}%
+\contentsline {subsection}{\numberline {1.0.3}42444 Poole KY Webster 37.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}641 -\/87.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}6439}{1}{subsection.1.0.3}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Block\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer Class Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Constructor \& Destructor Documentation}{7}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}BlockBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{8}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}BlockBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{8}{subsubsection.4.1.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Member Function Documentation}{8}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}clear()}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}pack()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{9}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}pack()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}processBlockHeader()}{11}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}read()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{11}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}read()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}setBlockHeader()}{12}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}setPrecedingBlock()}{13}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}setSucceedingBlock()}{13}{subsubsection.4.1.2.9}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}unpack()}{14}{subsubsection.4.1.2.10}%
+\contentsline {subsubsection}{\numberline {4.1.2.11}write()}{14}{subsubsection.4.1.2.11}%
+\contentsline {subsection}{\numberline {4.1.3}Member Data Documentation}{15}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}blockHeader}{15}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}curr}{15}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}header}{15}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}length}{15}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}RBN}{15}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}unpackedRecords}{16}{subsubsection.4.1.3.6}%
+\contentsline {section}{\numberline {4.2}Csv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer Class Reference}{16}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Constructor \& Destructor Documentation}{17}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}CsvBuffer()}{17}{subsubsection.4.2.1.1}%
+\contentsline {subsection}{\numberline {4.2.2}Member Function Documentation}{17}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}getCurFieldHeader()}{17}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}init()}{18}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}read()}{19}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}readHeader()}{19}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}unpack()}{20}{subsubsection.4.2.2.5}%
+\contentsline {subsection}{\numberline {4.2.3}Member Data Documentation}{21}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}fieldNum}{21}{subsubsection.4.2.3.1}%
+\contentsline {section}{\numberline {4.3}Field\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info Struct Reference}{21}{section.4.3}%
+\contentsline {section}{\numberline {4.4}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info Struct Reference}{22}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Header Struct Reference}{22}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Header\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer Class Reference}{23}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Member Function Documentation}{23}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}read()}{23}{subsubsection.4.6.1.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.2}unpack()}{24}{subsubsection.4.6.1.2}%
+\contentsline {section}{\numberline {4.7}Header\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info Struct Reference}{25}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Primary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Header Struct Reference}{25}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Primary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Struct Struct Reference}{25}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Length\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Indicated\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer Class Reference}{26}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Constructor \& Destructor Documentation}{27}{subsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.1.1}LengthIndicatedBuffer()}{27}{subsubsection.4.10.1.1}%
+\contentsline {subsection}{\numberline {4.10.2}Member Function Documentation}{28}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}checkFileType()}{28}{subsubsection.4.10.2.1}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}clear()}{29}{subsubsection.4.10.2.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.3}getCurFieldHeader()}{29}{subsubsection.4.10.2.3}%
+\contentsline {subsubsection}{\numberline {4.10.2.4}getIndexFileName()}{30}{subsubsection.4.10.2.4}%
+\contentsline {subsubsection}{\numberline {4.10.2.5}init()}{30}{subsubsection.4.10.2.5}%
+\contentsline {subsubsection}{\numberline {4.10.2.6}pack()}{31}{subsubsection.4.10.2.6}%
+\contentsline {subsubsection}{\numberline {4.10.2.7}read()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{31}{subsubsection.4.10.2.7}%
+\contentsline {subsubsection}{\numberline {4.10.2.8}read()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{33}{subsubsection.4.10.2.8}%
+\contentsline {subsubsection}{\numberline {4.10.2.9}unpack()}{33}{subsubsection.4.10.2.9}%
+\contentsline {subsubsection}{\numberline {4.10.2.10}write()}{34}{subsubsection.4.10.2.10}%
+\contentsline {subsubsection}{\numberline {4.10.2.11}writeHeader()}{35}{subsubsection.4.10.2.11}%
+\contentsline {section}{\numberline {4.11}Length\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Indicated\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File Class Reference}{36}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Place Class Reference}{37}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Constructor \& Destructor Documentation}{38}{subsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.1}Place()}{38}{subsubsection.4.12.1.1}%
+\contentsline {subsection}{\numberline {4.12.2}Member Function Documentation}{39}{subsection.4.12.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.1}getCounty()}{39}{subsubsection.4.12.2.1}%
+\contentsline {subsubsection}{\numberline {4.12.2.2}getLat()}{39}{subsubsection.4.12.2.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.3}getLongi()}{40}{subsubsection.4.12.2.3}%
+\contentsline {subsubsection}{\numberline {4.12.2.4}getName()}{40}{subsubsection.4.12.2.4}%
+\contentsline {subsubsection}{\numberline {4.12.2.5}getSize()}{41}{subsubsection.4.12.2.5}%
+\contentsline {subsubsection}{\numberline {4.12.2.6}getState()}{41}{subsubsection.4.12.2.6}%
+\contentsline {subsubsection}{\numberline {4.12.2.7}getZipCode()}{41}{subsubsection.4.12.2.7}%
+\contentsline {subsubsection}{\numberline {4.12.2.8}operator=()}{42}{subsubsection.4.12.2.8}%
+\contentsline {subsubsection}{\numberline {4.12.2.9}unpack()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{43}{subsubsection.4.12.2.9}%
+\contentsline {subsubsection}{\numberline {4.12.2.10}unpack()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{44}{subsubsection.4.12.2.10}%
+\contentsline {section}{\numberline {4.13}Place\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Block Class Reference}{45}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Constructor \& Destructor Documentation}{46}{subsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.1}PlaceBlock()}{46}{subsubsection.4.13.1.1}%
+\contentsline {subsection}{\numberline {4.13.2}Member Function Documentation}{46}{subsection.4.13.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.1}getRecord()}{46}{subsubsection.4.13.2.1}%
+\contentsline {subsubsection}{\numberline {4.13.2.2}getSize()}{47}{subsubsection.4.13.2.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.3}print()}{47}{subsubsection.4.13.2.3}%
+\contentsline {subsubsection}{\numberline {4.13.2.4}sort()}{48}{subsubsection.4.13.2.4}%
+\contentsline {subsection}{\numberline {4.13.3}Member Data Documentation}{48}{subsection.4.13.3}%
+\contentsline {subsubsection}{\numberline {4.13.3.1}blockHeader}{48}{subsubsection.4.13.3.1}%
+\contentsline {subsubsection}{\numberline {4.13.3.2}highestKey}{49}{subsubsection.4.13.3.2}%
+\contentsline {subsubsection}{\numberline {4.13.3.3}placeBlock}{49}{subsubsection.4.13.3.3}%
+\contentsline {section}{\numberline {4.14}Primary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key Class Reference}{49}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Member Function Documentation}{50}{subsection.4.14.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.1}Add()}{50}{subsubsection.4.14.1.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.2}BinarySearch()}{50}{subsubsection.4.14.1.2}%
+\contentsline {subsubsection}{\numberline {4.14.1.3}Find()}{51}{subsubsection.4.14.1.3}%
+\contentsline {subsubsection}{\numberline {4.14.1.4}GenerateIndexFile()}{51}{subsubsection.4.14.1.4}%
+\contentsline {subsubsection}{\numberline {4.14.1.5}ReadIndexFile()}{52}{subsubsection.4.14.1.5}%
+\contentsline {chapter}{\numberline {5}File Documentation}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}block\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Csv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.5.2}%
+\contentsline {section}{\numberline {5.3}enums.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Header.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Header\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Length\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Indicated\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{56}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Length\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Indicated\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{57}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Place.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{57}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Place\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Block.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{58}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Primary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{58}{section.5.10}%

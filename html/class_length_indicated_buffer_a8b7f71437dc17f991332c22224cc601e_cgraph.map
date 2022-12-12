@@ -1,0 +1,6 @@
+<map id="LengthIndicatedBuffer::init" name="LengthIndicatedBuffer::init">
+<area shape="rect" id="node1" title="read and extract the header." alt="" coords="5,63,152,103"/>
+<area shape="rect" id="node2" href="$class_length_indicated_buffer.html#ab0d5e941b8b185084b0288405f887fa7" title="read the first 4 bytes of the file and check against the magic number." alt="" coords="200,5,347,45"/>
+<area shape="rect" id="node3" href="$class_header_buffer.html#a8abdcb78c87542101af7e3768cf432b3" title="Read header file into buffer." alt="" coords="209,70,338,95"/>
+<area shape="rect" id="node4" href="$class_header_buffer.html#a79add559d2bb9a954b05f96c5c4f3d5a" title="Unpacks header fields from buffer into Header object." alt="" coords="200,119,347,145"/>
+</map>

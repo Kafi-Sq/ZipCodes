@@ -1,0 +1,33 @@
+Project 4 Instructions
+
+Compiling Compile with g++ --std=c++17 -\/Wall -\/o Zip\+Code.\+out $\ast$.cpp -\/lstdc++fs
+
+(-\/lstdc++fs links the filesystem library and must be at the end of the call to g++)
+
+Running There are two optional arguments that will change the way the program functions.
+
+-\/Z$<$list\+\_\+of\+\_\+zip\+\_\+codes$>$ where list\+\_\+of\+\_\+zip\+\_\+codes is a comma separated list of zip codes to search the file for
+
+-\/C$<$csv\+\_\+filename$>$ where csv\+\_\+filename is the name of a csv file of the type used in this project.
+
+The only required argument is a path to a file.
+
+If -\/C is used, the program will try to convert the csv file to the lirf format and write it to the lirf path provided. ~\newline
+ If -\/Z is used, the program will load the file from the path provided and search for the zip codes. ~\newline
+ If both -\/C and -\/Z are used, the program will currently act as if only -\/C was used. (This might change later)
+
+These options can appear in any order after the executable name.
+
+Examples\+:
+
+./\+Zip\+Code.out -\/Z24321,42444 example\+\_\+file ~\newline
+ will try to open and read a file called example\+\_\+file and search for the zip codes 24321 and 42444. Any zip codes that are found in the file will have their entire record printed in a table. The zip codes that are not found will be listed after any that were found.\hypertarget{md_readme_autotoc_md0}{}\doxysubsection{For example, using these two zip codes on the file provided, the output will look like}\label{md_readme_autotoc_md0}
+\hypertarget{md_readme_autotoc_md1}{}\doxysubsection{Zip       Place Name\+State  County       Latitude    Longitude}\label{md_readme_autotoc_md1}
+\hypertarget{md_readme_autotoc_md2}{}\doxysubsection{42444     Poole     KY     Webster      37.\+641      -\/87.\+6439}\label{md_readme_autotoc_md2}
+The following zip codes did not match any records in the file\+: 24321
+
+./\+Zip\+Code.out -\/\+Cexample\+\_\+csv\+\_\+file.\+csv example\+\_\+file ~\newline
+ will try to open and read a file called example\+\_\+csv\+\_\+file.\+csv and will create or overwrite a file called example\+\_\+file with the data read from the csv file.
+
+./\+Zip\+Code.out example\+\_\+file ~\newline
+ without either optional argument, the program will simply try to read example\+\_\+file as a file and do nothing. 

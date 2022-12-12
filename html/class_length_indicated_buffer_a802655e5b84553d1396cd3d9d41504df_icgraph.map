@@ -1,0 +1,4 @@
+<map id="LengthIndicatedBuffer::getCurFieldHeader" name="LengthIndicatedBuffer::getCurFieldHeader">
+<area shape="rect" id="node1" title="Gets the type and value of the current field." alt="" coords="159,5,305,45"/>
+<area shape="rect" id="node2" href="$class_place.html#af76af3644870c3d2636e91e8d4da3187" title="Reads a record from the buffer and unpacks the fields into the class members." alt="" coords="5,13,111,38"/>
+</map>

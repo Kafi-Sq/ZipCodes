@@ -1,0 +1,62 @@
+\hypertarget{_length_indicated_buffer_8h_source}{}\doxysection{Length\+Indicated\+Buffer.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef LIBUFFER\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define LIBUFFER\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <array>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <istream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}Header.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}enums.h"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer}} \{}
+\DoxyCodeLine{16    \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \textcolor{keyword}{const} \textcolor{keywordtype}{char} delim;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} recordLength;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{bool} initialized = \textcolor{keyword}{false};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{char} buffer[1000];}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_length_indicated_buffer_ac8ba3b4e788d9fbbc11fe8d4337367bb}{curr}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_length_indicated_buffer_a73124c7d0f8d084dced6059a798542d0}{fieldNum}} = 0;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_length_indicated_buffer_a71a375a5f2c20505c958a2f8f0a05ecf}{numFields}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33    \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \mbox{\hyperlink{struct_header}{Header}} header;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{43     \mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} delim = \textcolor{charliteral}{','});}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_length_indicated_buffer_a7fc9db4e8298e47993c001fe78f1c05a}{read}}(std::istream\& instream);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_length_indicated_buffer_a7fc9db4e8298e47993c001fe78f1c05a}{read}}(std::istream\& instream, \textcolor{keywordtype}{int} indexOffset);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_length_indicated_buffer_ae7a2bd9067a7017a3a1810922e981b09}{unpack}}(std::string\& str);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_length_indicated_buffer_a0a105a867458c3bf54c1344a6c7d18a6}{pack}}(\textcolor{keyword}{const} std::string str);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_length_indicated_buffer_a90ffd821ed52ea80bb279b0ff48060c4}{write}}(std::ostream\& outstream);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{132     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_length_indicated_buffer_a8b7f71437dc17f991332c22224cc601e}{init}}(std::istream\& instream);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{141     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_length_indicated_buffer_a9e8045480b2df9f214069b3e1c594485}{writeHeader}}(std::ostream\& outstream);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{149     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_length_indicated_buffer_a4fe88cd0641786d94802c7d5aaf2152f}{clear}}();}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{162     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_length_indicated_buffer_ab0d5e941b8b185084b0288405f887fa7}{checkFileType}}(std::istream\& instream);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{172     std::string \mbox{\hyperlink{class_length_indicated_buffer_a94a014a6edabdd32e6eeb7419c976261}{getIndexFileName}}();}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{183     \mbox{\hyperlink{struct_field_info}{FieldInfo}} \mbox{\hyperlink{class_length_indicated_buffer_a802655e5b84553d1396cd3d9d41504df}{getCurFieldHeader}}();}
+\DoxyCodeLine{184 \};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

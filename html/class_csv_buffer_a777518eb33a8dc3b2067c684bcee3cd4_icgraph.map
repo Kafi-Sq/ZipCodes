@@ -1,0 +1,4 @@
+<map id="CsvBuffer::getCurFieldHeader" name="CsvBuffer::getCurFieldHeader">
+<area shape="rect" id="node1" title="Gets the type and value of the current field." alt="" coords="159,5,349,31"/>
+<area shape="rect" id="node2" href="$class_place.html#a8251513e094314f8532cda0919923281" title="Reads a record from the buffer and unpacks the fields into the class members." alt="" coords="5,5,111,31"/>
+</map>

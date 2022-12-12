@@ -1,0 +1,5 @@
+<map id="LengthIndicatedBuffer::read" name="LengthIndicatedBuffer::read">
+<area shape="rect" id="node1" title="Seek to the specified offset in the file and read a single length indicated record into the buffer." alt="" coords="5,5,152,45"/>
+<area shape="rect" id="node2" href="$class_length_indicated_buffer.html#a7fc9db4e8298e47993c001fe78f1c05a" title="Read a single length indicated record into the buffer." alt="" coords="200,5,347,45"/>
+<area shape="rect" id="node3" href="$class_length_indicated_buffer.html#a4fe88cd0641786d94802c7d5aaf2152f" title="Sets curr to start of buffer." alt="" coords="395,5,541,45"/>
+</map>

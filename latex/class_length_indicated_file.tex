@@ -1,0 +1,66 @@
+\hypertarget{class_length_indicated_file}{}\doxysection{Length\+Indicated\+File Class Reference}
+\label{class_length_indicated_file}\index{LengthIndicatedFile@{LengthIndicatedFile}}
+
+
+Collaboration diagram for Length\+Indicated\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_length_indicated_file__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a4dd7657f427f20fb674a0f8ba2afbb44}\label{class_length_indicated_file_a4dd7657f427f20fb674a0f8ba2afbb44}} 
+{\bfseries Length\+Indicated\+File} (std\+::string file\+Name)
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a7a088840f235d8f5b338142536b9fc10}\label{class_length_indicated_file_a7a088840f235d8f5b338142536b9fc10}} 
+void {\bfseries initialize\+Buffers} ()
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a6e829530e25b33a6a5a45c723d5e5490}\label{class_length_indicated_file_a6e829530e25b33a6a5a45c723d5e5490}} 
+void {\bfseries initialize\+Index} ()
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_acc3b13e5fef8d562a4ddda14da2d4e94}\label{class_length_indicated_file_acc3b13e5fef8d562a4ddda14da2d4e94}} 
+bool {\bfseries open\+Data\+File} ()
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_aa0828b4a45b5a8f17f5d8881a0381507}\label{class_length_indicated_file_aa0828b4a45b5a8f17f5d8881a0381507}} 
+std\+::optional$<$ \mbox{\hyperlink{class_place}{Place}} $>$ {\bfseries find\+Record} (std\+::string record\+Key)
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_adb594ecad26d03b936f998b85728acc5}\label{class_length_indicated_file_adb594ecad26d03b936f998b85728acc5}} 
+void {\bfseries generate\+Index} ()
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a5278d99084f94a178b0fcd87ebeb14fe}\label{class_length_indicated_file_a5278d99084f94a178b0fcd87ebeb14fe}} 
+bool {\bfseries index\+File\+Exists} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a8f63074730e6e36990a3ee71f87439f2}\label{class_length_indicated_file_a8f63074730e6e36990a3ee71f87439f2}} 
+\mbox{\hyperlink{struct_header}{Header}} {\bfseries header}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_ac774f8e577c6762e28b615e818b20758}\label{class_length_indicated_file_ac774f8e577c6762e28b615e818b20758}} 
+\mbox{\hyperlink{class_primary_key}{Primary\+Key}} {\bfseries index}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a1c80ca71ab94937969b4b7c334003796}\label{class_length_indicated_file_a1c80ca71ab94937969b4b7c334003796}} 
+\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}} {\bfseries read\+Buf}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a5e8437ece6f2061e2fe78abae1df8084}\label{class_length_indicated_file_a5e8437ece6f2061e2fe78abae1df8084}} 
+\mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}} {\bfseries write\+Buf}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_a2d09311c64794d4c9b20bf2898b5a227}\label{class_length_indicated_file_a2d09311c64794d4c9b20bf2898b5a227}} 
+std\+::string {\bfseries file\+Name}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_add9d2756ea6fc3c7b87ad65d3d7eae03}\label{class_length_indicated_file_add9d2756ea6fc3c7b87ad65d3d7eae03}} 
+std\+::fstream {\bfseries file}
+\item 
+\mbox{\Hypertarget{class_length_indicated_file_ab90d18a7eb6b9dda9b2ce39acf0cb074}\label{class_length_indicated_file_ab90d18a7eb6b9dda9b2ce39acf0cb074}} 
+int {\bfseries data\+Start}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Length\+Indicated\+File.\+h\item 
+Length\+Indicated\+File.\+cpp\end{DoxyCompactItemize}

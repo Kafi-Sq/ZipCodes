@@ -1,0 +1,161 @@
+\hypertarget{class_place_block}{}\doxysection{Place\+Block Class Reference}
+\label{class_place_block}\index{PlaceBlock@{PlaceBlock}}
+
+
+Collaboration diagram for Place\+Block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_place_block__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_place_block_ac0bc7b830fd8685e02e8b37fe679d821}{Place\+Block}} ()=default
+\item 
+\mbox{\Hypertarget{class_place_block_a5bd6a79449776129ad129f19d3857e04}\label{class_place_block_a5bd6a79449776129ad129f19d3857e04}} 
+bool {\bfseries unpack} (\mbox{\hyperlink{class_block_buffer}{Block\+Buffer}} \&b\+Buf, \mbox{\hyperlink{class_length_indicated_buffer}{Length\+Indicated\+Buffer}}$<$ Block\+File\+Header $>$ \&l\+Buf)
+\item 
+\mbox{\Hypertarget{class_place_block_a6d7ec8fbd887243e39932bc0d57be599}\label{class_place_block_a6d7ec8fbd887243e39932bc0d57be599}} 
+string {\bfseries get\+Highest\+Key} ()
+\item 
+optional$<$ \mbox{\hyperlink{class_place}{Place}} $>$ \mbox{\hyperlink{class_place_block_aeff6593ad69eac29c4c42c95fb103441}{get\+Record}} (const string \&key)
+\item 
+void \mbox{\hyperlink{class_place_block_adb9b0e5e673eb5007cbb9dd6dde278d2}{print}} ()
+\item 
+void \mbox{\hyperlink{class_place_block_a5a38c5ec3d97b8ce097a623906e5b377}{sort}} ()
+\item 
+int \mbox{\hyperlink{class_place_block_a9c47a57fcd073736884a3c078f3cb2a5}{get\+Size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Block\+Header \mbox{\hyperlink{class_place_block_a7d6554ad833cd843f5e51312a90e917e}{block\+Header}}
+\item 
+vector$<$ \mbox{\hyperlink{class_place}{Place}} $>$ \mbox{\hyperlink{class_place_block_aee2f4ab3880fde862ed893aba51473f6}{place\+Block}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_place_block_af8de824ae7e03434e0532636a6efa04b}\label{class_place_block_af8de824ae7e03434e0532636a6efa04b}} 
+int {\bfseries size} = -\/1
+\item 
+string \mbox{\hyperlink{class_place_block_a0efd287c91ec65a508557b8e83bdaf8c}{highest\+Key}} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_place_block_ac0bc7b830fd8685e02e8b37fe679d821}\label{class_place_block_ac0bc7b830fd8685e02e8b37fe679d821}} 
+\index{PlaceBlock@{PlaceBlock}!PlaceBlock@{PlaceBlock}}
+\index{PlaceBlock@{PlaceBlock}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{PlaceBlock()}{PlaceBlock()}}
+{\footnotesize\ttfamily Place\+Block\+::\+Place\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+content of place block class constructor that contructs class with default values \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+creates object with default values 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_place_block_aeff6593ad69eac29c4c42c95fb103441}\label{class_place_block_aeff6593ad69eac29c4c42c95fb103441}} 
+\index{PlaceBlock@{PlaceBlock}!getRecord@{getRecord}}
+\index{getRecord@{getRecord}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{getRecord()}{getRecord()}}
+{\footnotesize\ttfamily optional$<$ \mbox{\hyperlink{class_place}{Place}} $>$ Place\+Block\+::get\+Record (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption})}
+
+retrieves records with matching key 
+\begin{DoxyParams}{Parameters}
+{\em key} & key to be searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns object if one matches the key, returns empty object if no matching key 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_place_block_a9c47a57fcd073736884a3c078f3cb2a5}\label{class_place_block_a9c47a57fcd073736884a3c078f3cb2a5}} 
+\index{PlaceBlock@{PlaceBlock}!getSize@{getSize}}
+\index{getSize@{getSize}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Place\+Block\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns the size of place block object \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns int variable ~\newline
+ 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_place_block_adb9b0e5e673eb5007cbb9dd6dde278d2}\label{class_place_block_adb9b0e5e673eb5007cbb9dd6dde278d2}} 
+\index{PlaceBlock@{PlaceBlock}!print@{print}}
+\index{print@{print}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Place\+Block\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+prints the records contained within \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+sends contents held within to cout 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_place_block_a5a38c5ec3d97b8ce097a623906e5b377}\label{class_place_block_a5a38c5ec3d97b8ce097a623906e5b377}} 
+\index{PlaceBlock@{PlaceBlock}!sort@{sort}}
+\index{sort@{sort}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void Place\+Block\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+sorts place block content \begin{DoxyPrecond}{Precondition}
+must have content within 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+place block is now sorted 
+\end{DoxyPostcond}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_place_block_a5a38c5ec3d97b8ce097a623906e5b377_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_place_block_a5a38c5ec3d97b8ce097a623906e5b377_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_place_block_a7d6554ad833cd843f5e51312a90e917e}\label{class_place_block_a7d6554ad833cd843f5e51312a90e917e}} 
+\index{PlaceBlock@{PlaceBlock}!blockHeader@{blockHeader}}
+\index{blockHeader@{blockHeader}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{blockHeader}{blockHeader}}
+{\footnotesize\ttfamily Block\+Header Place\+Block\+::block\+Header}
+
+highest key \mbox{\Hypertarget{class_place_block_a0efd287c91ec65a508557b8e83bdaf8c}\label{class_place_block_a0efd287c91ec65a508557b8e83bdaf8c}} 
+\index{PlaceBlock@{PlaceBlock}!highestKey@{highestKey}}
+\index{highestKey@{highestKey}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{highestKey}{highestKey}}
+{\footnotesize\ttfamily string Place\+Block\+::highest\+Key = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+size of place block \mbox{\Hypertarget{class_place_block_aee2f4ab3880fde862ed893aba51473f6}\label{class_place_block_aee2f4ab3880fde862ed893aba51473f6}} 
+\index{PlaceBlock@{PlaceBlock}!placeBlock@{placeBlock}}
+\index{placeBlock@{placeBlock}!PlaceBlock@{PlaceBlock}}
+\doxysubsubsection{\texorpdfstring{placeBlock}{placeBlock}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_place}{Place}}$>$ Place\+Block\+::place\+Block}
+
+header for blocks 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Place\+Block.\+h\item 
+Place\+Block.\+cpp\end{DoxyCompactItemize}

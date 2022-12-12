@@ -1,0 +1,40 @@
+\hypertarget{block_buffer_8h_source}{}\doxysection{block\+Buffer.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}LengthIndicatedBuffer.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Place.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}PlaceBlock.h"{}}}
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_block_buffer}{BlockBuffer}} \{}
+\DoxyCodeLine{8     \textcolor{keyword}{private}:}
+\DoxyCodeLine{13         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_block_buffer_aec0d79f9c2e900d6ca6fdf4f586c69be}{read}}(istream \&file);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{16         std::vector<char> buffer;}
+\DoxyCodeLine{17         BlockFileHeader \mbox{\hyperlink{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}{header}};}
+\DoxyCodeLine{18         BlockHeader \mbox{\hyperlink{class_block_buffer_ac7df6b18a950a7d1989cd194283402da}{blockHeader}};}
+\DoxyCodeLine{19         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a2d76942e2e4b234b4cc71fe023d54a2e}{unpackedRecords}} = 0;}
+\DoxyCodeLine{20         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a2d60154ffe9371a26447c44a8c22d811}{curr}} = 0;}
+\DoxyCodeLine{21         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a97954e888186e4ff0e0724db1b622cce}{length}} = 0;}
+\DoxyCodeLine{22         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}};}
+\DoxyCodeLine{26         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_aae9f4d41232b4301c24417d6060517ad}{processBlockHeader}}();}
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_ab22a13eb521fd8e981877c8f902893ec}{setBlockHeader}}(BlockHeader \mbox{\hyperlink{class_block_buffer_ac7df6b18a950a7d1989cd194283402da}{blockHeader}});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{36         \mbox{\hyperlink{class_block_buffer_a3d5a7c89997cd3b87e853c03b31fa115}{BlockBuffer}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{42         \mbox{\hyperlink{class_block_buffer_a3d5a7c89997cd3b87e853c03b31fa115}{BlockBuffer}}(BlockFileHeader \&\mbox{\hyperlink{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}{header}});}
+\DoxyCodeLine{48         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_block_buffer_aec0d79f9c2e900d6ca6fdf4f586c69be}{read}}(istream \&file, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}});}
+\DoxyCodeLine{54         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_a968d2b19d9419fcfe7ecedc65d08b09a}{write}}(ostream \&file, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}});}
+\DoxyCodeLine{59         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_block_buffer_a9cd55305a80614f98178dc65c4d8b6c3}{unpack}}(\mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer<BlockFileHeader>}} \&lBuf);}
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_a5a5d18159ff5ff169c6d94b06dfeab23}{pack}}(\mbox{\hyperlink{class_place_block}{PlaceBlock}} pb, \mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer<BlockFileHeader>}} \&lBuf);}
+\DoxyCodeLine{70         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_a5a5d18159ff5ff169c6d94b06dfeab23}{pack}}(\mbox{\hyperlink{class_length_indicated_buffer}{LengthIndicatedBuffer<BlockFileHeader>}} \&lBuf);}
+\DoxyCodeLine{75         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_ac891e2acc41ddfec1b4e5c3d622d84a6}{setPrecedingBlock}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}});}
+\DoxyCodeLine{80         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_a61703a4a1dd5eee8250072f98c9d0c95}{setSucceedingBlock}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_block_buffer_a0bfe70c981087631ff58b0bc9cd84d63}{RBN}});}
+\DoxyCodeLine{84         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_buffer_ae6b6209ee18853f89260633b380c41bf}{clear}}();}
+\DoxyCodeLine{85         }
+\DoxyCodeLine{86         \textcolor{keywordtype}{void} init(BlockFileHeader \&\mbox{\hyperlink{class_block_buffer_a0410786affa7578f7c34ead0de319dd2}{header}});}
+\DoxyCodeLine{87 \};}
+
+\end{DoxyCode}

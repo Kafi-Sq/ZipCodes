@@ -1,0 +1,98 @@
+\hypertarget{_header_8h_source}{}\doxysection{Header.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef HEADER\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define HEADER\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}enums.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// needed to remove automatic alignment of struct members}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#pragma pack(push, 1)}}
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_header_info}{HeaderInfo}} \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{char} magic[4];   }
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_header_info_a8cec9ed005303c83856771f2343b6bb7}{version}};     }
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_header_info_a93b5ff22273f05810d12964fcb8549f0}{headerSize}};  }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{struct_header_info_a706ba3066fc06e2b6c40850d46a92a34}{operator>>}}(std::istream\& ins, \mbox{\hyperlink{struct_header_info}{HeaderInfo}}\& headerInfo) \{}
+\DoxyCodeLine{23         ins.read((\textcolor{keywordtype}{char}*)(\&headerInfo), \textcolor{keyword}{sizeof}(headerInfo));}
+\DoxyCodeLine{24         \textcolor{keywordflow}{return} ins;}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& os, \mbox{\hyperlink{struct_header_info}{HeaderInfo}}\& headerInfo) \{}
+\DoxyCodeLine{28         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&headerInfo.magic), \textcolor{keyword}{sizeof}(headerInfo.magic));}
+\DoxyCodeLine{29         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&headerInfo.\mbox{\hyperlink{struct_header_info_a8cec9ed005303c83856771f2343b6bb7}{version}}), \textcolor{keyword}{sizeof}(headerInfo.\mbox{\hyperlink{struct_header_info_a8cec9ed005303c83856771f2343b6bb7}{version}}));}
+\DoxyCodeLine{30         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&headerInfo.\mbox{\hyperlink{struct_header_info_a93b5ff22273f05810d12964fcb8549f0}{headerSize}}), \textcolor{keyword}{sizeof}(headerInfo.\mbox{\hyperlink{struct_header_info_a93b5ff22273f05810d12964fcb8549f0}{headerSize}}));}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_file_info}{FileInfo}} \{}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} lengthIndicatorSize;    }
+\DoxyCodeLine{37     LengthIndicatorType \mbox{\hyperlink{struct_file_info_a7e99c20e9bb5f9c105875c3c7653966b}{lengthIndicatorFormat}};  }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_file_info_a4161c9cf6024f8df13f7c92b7bf14c01}{fieldsPerRecord}};     }
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_file_info_ac80ee57e1aea91f216d390e9435c4a0e}{primaryKeyPosition}};  }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_file_info_a44336af500fa996e1e78ecb6a81627bc}{indexFileName}}[100];  }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{struct_file_info_a58d7e575ffea700793a88e2866dfa9c4}{operator>>}}(std::istream\& ins, \mbox{\hyperlink{struct_file_info}{FileInfo}}\& fileInfo) \{}
+\DoxyCodeLine{45         ins.read((\textcolor{keywordtype}{char}*)(\&fileInfo), \textcolor{keyword}{sizeof}(fileInfo));}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} ins;}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& os, \mbox{\hyperlink{struct_file_info}{FileInfo}}\& fileInfo) \{}
+\DoxyCodeLine{50         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&fileInfo.lengthIndicatorSize), \textcolor{keyword}{sizeof}(fileInfo.lengthIndicatorSize));}
+\DoxyCodeLine{51         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&fileInfo.\mbox{\hyperlink{struct_file_info_a7e99c20e9bb5f9c105875c3c7653966b}{lengthIndicatorFormat}}), \textcolor{keyword}{sizeof}(fileInfo.\mbox{\hyperlink{struct_file_info_a7e99c20e9bb5f9c105875c3c7653966b}{lengthIndicatorFormat}}));}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&fileInfo.\mbox{\hyperlink{struct_file_info_a4161c9cf6024f8df13f7c92b7bf14c01}{fieldsPerRecord}}), \textcolor{keyword}{sizeof}(fileInfo.\mbox{\hyperlink{struct_file_info_a4161c9cf6024f8df13f7c92b7bf14c01}{fieldsPerRecord}}));}
+\DoxyCodeLine{54         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&fileInfo.\mbox{\hyperlink{struct_file_info_ac80ee57e1aea91f216d390e9435c4a0e}{primaryKeyPosition}}), \textcolor{keyword}{sizeof}(fileInfo.\mbox{\hyperlink{struct_file_info_ac80ee57e1aea91f216d390e9435c4a0e}{primaryKeyPosition}}));}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&fileInfo.\mbox{\hyperlink{struct_file_info_a44336af500fa996e1e78ecb6a81627bc}{indexFileName}}), \textcolor{keyword}{sizeof}(fileInfo.\mbox{\hyperlink{struct_file_info_a44336af500fa996e1e78ecb6a81627bc}{indexFileName}}));}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_field_info}{FieldInfo}} \{}
+\DoxyCodeLine{63     \textcolor{keywordtype}{char} fieldName[50];  }
+\DoxyCodeLine{64     HeaderField \mbox{\hyperlink{struct_field_info_a472a6d97defc7c55ade2ffd69a58c630}{fieldType}};  }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{struct_field_info_a0dcc30177df7b26a05c0d3b669c6b2c7}{operator>>}}(std::istream\& ins, \mbox{\hyperlink{struct_field_info}{FieldInfo}}\& fieldInfo) \{}
+\DoxyCodeLine{67         ins.read((\textcolor{keywordtype}{char}*)(\&fieldInfo), \textcolor{keyword}{sizeof}(fieldInfo));}
+\DoxyCodeLine{68         \textcolor{keywordflow}{return} ins;}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& os, \mbox{\hyperlink{struct_field_info}{FieldInfo}}\& fieldInfo) \{}
+\DoxyCodeLine{72         os.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&fieldInfo), \textcolor{keyword}{sizeof}(fieldInfo));}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_header}{Header}} \{}
+\DoxyCodeLine{78     \mbox{\hyperlink{struct_header_info}{HeaderInfo}} headerInfo;}
+\DoxyCodeLine{79     \mbox{\hyperlink{struct_file_info}{FileInfo}} fileInfo;}
+\DoxyCodeLine{80     std::vector<FieldInfo> fields;}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& os, \mbox{\hyperlink{struct_header}{Header}}\& header) \{}
+\DoxyCodeLine{83         os << header.headerInfo;}
+\DoxyCodeLine{84         os << header.fileInfo;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} f : header.fields) \{}
+\DoxyCodeLine{87             os << f;}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89         \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#pragma pack(pop)}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

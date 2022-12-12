@@ -1,0 +1,4 @@
+<map id="LengthIndicatedBuffer::unpack" name="LengthIndicatedBuffer::unpack">
+<area shape="rect" id="node1" title="Reads a field and puts it into a string." alt="" coords="159,5,305,45"/>
+<area shape="rect" id="node2" href="$class_place.html#af76af3644870c3d2636e91e8d4da3187" title="Reads a record from the buffer and unpacks the fields into the class members." alt="" coords="5,13,111,38"/>
+</map>
