@@ -1,5 +1,8 @@
-Script started on Wed 16 Nov 2022 10:58:12 PM CST
-]0;nz7517ib@csci4:~/CSCI331/Project4 [?1034h[nz7517ib@csci4 Project4]$ ./ZipCode.out -Z56301,501,99950,3 us_postal_codes.lir 
+Script started on Sun 11 Dec 2022 10:27:53 PM CST
+]0;nz7517ib@csci4:~/CSCI331/Project5 [?1034h[nz7517ib@csci4 Project4]$ ./ZipCode.out -Z56301,501,99950,3 us_postal_codes.lir 
+
+Simple Index files made: 
+2 
 
 --------------------------------------------------------------------------------
 Zip       Place Name      State  County                 Latitude    Longitude   
@@ -9,10 +12,8 @@ Zip       Place Name      State  County                 Latitude    Longitude
 99950     Ketchikan       AK     Ketchikan Gateway      55.3422     -131.6478   
 --------------------------------------------------------------------------------
 
-
-The following zip codes did not match any records in the file:
-3    
-]0;nz7517ib@csci4:~/CSCI331/Project4 [?1034h[nz7517ib@csci4 Project4]$ exit
+   
+]0;nz7517ib@csci4:~/CSCI331/Project5 [?1034h[nz7517ib@csci4 Project4]$ exit
 exit
 
-Script done on Wed 16 Nov 2022 10:59:20 AM CST
+Script done on Sun 11 Dec 2022 10:28:20 PM CST
